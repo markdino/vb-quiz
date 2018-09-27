@@ -60,8 +60,8 @@ Partial Class frmAddQuiz
         Me.txtNotes = New System.Windows.Forms.TextBox()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnEdit = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.cboSubj = New System.Windows.Forms.ComboBox()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -340,23 +340,23 @@ Partial Class frmAddQuiz
         Me.btnSave.Text = "&Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
-        'btnEdit
+        'btnClear
         '
-        Me.btnEdit.Location = New System.Drawing.Point(567, 652)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(100, 39)
-        Me.btnEdit.TabIndex = 3
-        Me.btnEdit.Text = "&Edit"
-        Me.btnEdit.UseVisualStyleBackColor = True
+        Me.btnClear.Location = New System.Drawing.Point(567, 652)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(100, 39)
+        Me.btnClear.TabIndex = 3
+        Me.btnClear.Text = "&Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
-        'btnUpdate
+        'btnDelete
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(673, 652)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(100, 39)
-        Me.btnUpdate.TabIndex = 3
-        Me.btnUpdate.Text = "&Update"
-        Me.btnUpdate.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(673, 652)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(100, 39)
+        Me.btnDelete.TabIndex = 3
+        Me.btnDelete.Text = "&Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'cboSubj
         '
@@ -374,8 +374,8 @@ Partial Class frmAddQuiz
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(786, 694)
         Me.Controls.Add(Me.cboSubj)
-        Me.Controls.Add(Me.btnUpdate)
-        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.txtQ)
@@ -441,7 +441,7 @@ Partial Class frmAddQuiz
     Friend WithEvents txtNotes As TextBox
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnSave As Button
-    Friend WithEvents btnEdit As Button
-    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnClear As Button
+    Friend WithEvents btnDelete As Button
     Friend WithEvents cboSubj As ComboBox
 End Class
