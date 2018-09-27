@@ -29,7 +29,7 @@
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         BSquiz.AddNew()
-        txtID.Text = DataGridView1.RowCount
+        txtID.Text = DataGridView1.Rows(DataGridView1.RowCount - 2).Cells(0).Value + 1
     End Sub
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Validate()
@@ -58,5 +58,18 @@
         End If
     End Sub
 
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        txtQ.Clear()
+        txtA.Clear()
+        txtB.Clear()
+        txtC.Clear()
+        txtD.Clear()
+        txtCorrect.Clear()
+        txtNotes.Clear()
+    End Sub
 
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        BSquiz.RemoveCurrent()
+
+    End Sub
 End Class
