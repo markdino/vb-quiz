@@ -212,6 +212,7 @@ Partial Class frmAddQuiz
         Me.txtID.Location = New System.Drawing.Point(63, 385)
         Me.txtID.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtID.Name = "txtID"
+        Me.txtID.ReadOnly = True
         Me.txtID.Size = New System.Drawing.Size(66, 26)
         Me.txtID.TabIndex = 2
         '
