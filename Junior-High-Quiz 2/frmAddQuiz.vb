@@ -57,6 +57,10 @@
         BSquiz.EndEdit()
         UpdateData()
     End Sub
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        BSquiz.RemoveCurrent()
+    End Sub
+
     Public Sub UpdateData()
         If cboSubj.Text = "Math" Then
             MathTableAdapter.Update(QuizDataSet)
@@ -89,8 +93,7 @@
         txtNotes.Clear()
     End Sub
 
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        BSquiz.RemoveCurrent()
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmQuiz.Show()
     End Sub
-
 End Class

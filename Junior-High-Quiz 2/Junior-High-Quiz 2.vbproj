@@ -85,6 +85,12 @@
     <Compile Include="frmAddQuiz.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmQuiz.Designer.vb">
+      <DependentUpon>frmQuiz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuiz.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -110,6 +116,9 @@
     <EmbeddedResource Include="frmAddQuiz.resx">
       <DependentUpon>frmAddQuiz.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuiz.resx">
+      <DependentUpon>frmQuiz.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -120,7 +129,6 @@
   <ItemGroup>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

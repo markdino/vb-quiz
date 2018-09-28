@@ -63,6 +63,7 @@ Partial Class frmAddQuiz
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.cboSubj = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -388,11 +389,21 @@ Partial Class frmAddQuiz
         Me.cboSubj.TabIndex = 4
         Me.cboSubj.Text = "Select Subject Here . . ."
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(210, 581)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(84, 24)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmAddQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(786, 626)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cboSubj)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnClear)
@@ -417,7 +428,7 @@ Partial Class frmAddQuiz
         Me.MinimumSize = New System.Drawing.Size(802, 665)
         Me.Name = "frmAddQuiz"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmAddQuiz"
+        Me.Text = "Add Quiz"
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -466,4 +477,5 @@ Partial Class frmAddQuiz
     Friend WithEvents btnClear As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents cboSubj As ComboBox
+    Friend WithEvents Button1 As Button
 End Class
