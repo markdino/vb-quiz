@@ -63,6 +63,7 @@ Partial Class frmAddQuiz
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.cboSubj = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,6 +123,8 @@ Partial Class frmAddQuiz
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.QuizDataGridViewTextBoxColumn, Me.ADataGridViewTextBoxColumn, Me.BDataGridViewTextBoxColumn, Me.CDataGridViewTextBoxColumn, Me.DDataGridViewTextBoxColumn, Me.NotesDataGridViewTextBoxColumn, Me.TakeDataGridViewCheckBoxColumn, Me.CorrectDataGridViewTextBoxColumn})
@@ -130,7 +133,7 @@ Partial Class frmAddQuiz
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(745, 323)
+        Me.DataGridView1.Size = New System.Drawing.Size(745, 243)
         Me.DataGridView1.TabIndex = 0
         '
         'IDDataGridViewTextBoxColumn
@@ -199,7 +202,7 @@ Partial Class frmAddQuiz
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 388)
+        Me.Label1.Location = New System.Drawing.Point(22, 303)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(33, 20)
@@ -209,7 +212,7 @@ Partial Class frmAddQuiz
         'txtID
         '
         Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BSquiz, "ID", True))
-        Me.txtID.Location = New System.Drawing.Point(63, 385)
+        Me.txtID.Location = New System.Drawing.Point(63, 300)
         Me.txtID.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtID.Name = "txtID"
         Me.txtID.ReadOnly = True
@@ -219,7 +222,7 @@ Partial Class frmAddQuiz
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 424)
+        Me.Label2.Location = New System.Drawing.Point(22, 339)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(77, 20)
@@ -228,8 +231,11 @@ Partial Class frmAddQuiz
         '
         'txtQ
         '
+        Me.txtQ.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtQ.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BSquiz, "Quiz", True))
-        Me.txtQ.Location = New System.Drawing.Point(26, 449)
+        Me.txtQ.Location = New System.Drawing.Point(26, 364)
         Me.txtQ.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtQ.Multiline = True
         Me.txtQ.Name = "txtQ"
@@ -239,8 +245,9 @@ Partial Class frmAddQuiz
         '
         'Label3
         '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(459, 388)
+        Me.Label3.Location = New System.Drawing.Point(459, 303)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(74, 20)
@@ -249,8 +256,9 @@ Partial Class frmAddQuiz
         '
         'txtA
         '
+        Me.txtA.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtA.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BSquiz, "A", True))
-        Me.txtA.Location = New System.Drawing.Point(463, 413)
+        Me.txtA.Location = New System.Drawing.Point(463, 328)
         Me.txtA.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtA.Name = "txtA"
         Me.txtA.Size = New System.Drawing.Size(146, 26)
@@ -258,8 +266,9 @@ Partial Class frmAddQuiz
         '
         'txtC
         '
+        Me.txtC.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtC.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BSquiz, "C", True))
-        Me.txtC.Location = New System.Drawing.Point(617, 413)
+        Me.txtC.Location = New System.Drawing.Point(617, 328)
         Me.txtC.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtC.Name = "txtC"
         Me.txtC.Size = New System.Drawing.Size(146, 26)
@@ -267,8 +276,9 @@ Partial Class frmAddQuiz
         '
         'txtB
         '
+        Me.txtB.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtB.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BSquiz, "B", True))
-        Me.txtB.Location = New System.Drawing.Point(463, 449)
+        Me.txtB.Location = New System.Drawing.Point(463, 364)
         Me.txtB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtB.Name = "txtB"
         Me.txtB.Size = New System.Drawing.Size(146, 26)
@@ -276,8 +286,9 @@ Partial Class frmAddQuiz
         '
         'txtD
         '
+        Me.txtD.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtD.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BSquiz, "D", True))
-        Me.txtD.Location = New System.Drawing.Point(617, 449)
+        Me.txtD.Location = New System.Drawing.Point(617, 364)
         Me.txtD.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtD.Name = "txtD"
         Me.txtD.Size = New System.Drawing.Size(146, 26)
@@ -285,8 +296,9 @@ Partial Class frmAddQuiz
         '
         'Label4
         '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(459, 489)
+        Me.Label4.Location = New System.Drawing.Point(459, 404)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(128, 20)
@@ -295,8 +307,9 @@ Partial Class frmAddQuiz
         '
         'txtCorrect
         '
+        Me.txtCorrect.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtCorrect.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BSquiz, "Correct", True))
-        Me.txtCorrect.Location = New System.Drawing.Point(463, 514)
+        Me.txtCorrect.Location = New System.Drawing.Point(463, 429)
         Me.txtCorrect.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCorrect.Name = "txtCorrect"
         Me.txtCorrect.Size = New System.Drawing.Size(146, 26)
@@ -304,8 +317,9 @@ Partial Class frmAddQuiz
         '
         'Label5
         '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(459, 552)
+        Me.Label5.Location = New System.Drawing.Point(459, 467)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(55, 20)
@@ -314,8 +328,10 @@ Partial Class frmAddQuiz
         '
         'txtNotes
         '
+        Me.txtNotes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtNotes.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BSquiz, "Notes", True))
-        Me.txtNotes.Location = New System.Drawing.Point(463, 577)
+        Me.txtNotes.Location = New System.Drawing.Point(463, 492)
         Me.txtNotes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNotes.Multiline = True
         Me.txtNotes.Name = "txtNotes"
@@ -325,7 +341,8 @@ Partial Class frmAddQuiz
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(330, 652)
+        Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAdd.Location = New System.Drawing.Point(330, 567)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(100, 39)
         Me.btnAdd.TabIndex = 3
@@ -334,7 +351,8 @@ Partial Class frmAddQuiz
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(436, 652)
+        Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSave.Location = New System.Drawing.Point(436, 567)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(100, 39)
         Me.btnSave.TabIndex = 3
@@ -343,7 +361,8 @@ Partial Class frmAddQuiz
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(567, 652)
+        Me.btnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClear.Location = New System.Drawing.Point(567, 567)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(100, 39)
         Me.btnClear.TabIndex = 3
@@ -352,7 +371,8 @@ Partial Class frmAddQuiz
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(673, 652)
+        Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnDelete.Location = New System.Drawing.Point(673, 567)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(100, 39)
         Me.btnDelete.TabIndex = 3
@@ -369,11 +389,21 @@ Partial Class frmAddQuiz
         Me.cboSubj.TabIndex = 4
         Me.cboSubj.Text = "Select Subject Here . . ."
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(210, 581)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(84, 24)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmAddQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(786, 694)
+        Me.ClientSize = New System.Drawing.Size(786, 626)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cboSubj)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnClear)
@@ -395,8 +425,10 @@ Partial Class frmAddQuiz
         Me.Controls.Add(Me.DataGridView1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MinimumSize = New System.Drawing.Size(802, 665)
         Me.Name = "frmAddQuiz"
-        Me.Text = "frmAddQuiz"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Add Quiz"
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -445,4 +477,5 @@ Partial Class frmAddQuiz
     Friend WithEvents btnClear As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents cboSubj As ComboBox
+    Friend WithEvents Button1 As Button
 End Class
