@@ -92,8 +92,43 @@
         txtCorrect.Clear()
         txtNotes.Clear()
     End Sub
+    Private Sub restrictRow1()
+        If txtID.Text = "1" Then
+            disableEdit()
+        Else
+            enableEdit()
+        End If
+    End Sub
+    Private Sub disableEdit()
+        btnClear.Enabled = False
+        btnSave.Enabled = False
+        btnDelete.Enabled = False
+        txtQ.Enabled = False
+        txtA.Enabled = False
+        txtB.Enabled = False
+        txtC.Enabled = False
+        txtD.Enabled = False
+        txtCorrect.Enabled = False
+        txtNotes.Enabled = False
+    End Sub
+    Private Sub enableEdit()
+        btnClear.Enabled = True
+        btnSave.Enabled = True
+        btnDelete.Enabled = True
+        txtQ.Enabled = True
+        txtA.Enabled = True
+        txtB.Enabled = True
+        txtC.Enabled = True
+        txtD.Enabled = True
+        txtCorrect.Enabled = True
+        txtNotes.Enabled = True
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         frmQuiz.Show()
+    End Sub
+
+    Private Sub txtID_TextChanged(sender As Object, e As EventArgs) Handles txtID.TextChanged
+        restrictRow1()
     End Sub
 End Class
