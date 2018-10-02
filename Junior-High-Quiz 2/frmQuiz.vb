@@ -32,14 +32,13 @@
 
         End While
 
-        MsgBox(x)
-        'txtQuestion.Text = DataGridView1.Rows(x).Cells(1).Value
-        'btnA.Text = DataGridView1.Rows(x).Cells(2).Value
-        'btnB.Text = DataGridView1.Rows(x).Cells(3).Value
-        'btnC.Text = DataGridView1.Rows(x).Cells(4).Value
-        'btnD.Text = DataGridView1.Rows(x).Cells(5).Value
-        'notes = DataGridView1.Rows(x).Cells(6).Value
-        'correctAns = DataGridView1.Rows(x).Cells(8).Value
+        txtQuestion.Text = DataGridView1.Rows(x).Cells(1).Value
+        btnA.Text = DataGridView1.Rows(x).Cells(2).Value
+        btnB.Text = DataGridView1.Rows(x).Cells(3).Value
+        btnC.Text = DataGridView1.Rows(x).Cells(4).Value
+        btnD.Text = DataGridView1.Rows(x).Cells(5).Value
+        notes = DataGridView1.Rows(x).Cells(6).Value
+        correctAns = DataGridView1.Rows(x).Cells(8).Value
         DataGridView1.Rows(x).Cells(7).Value = True
     End Sub
 
