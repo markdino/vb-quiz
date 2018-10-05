@@ -54,6 +54,11 @@ Partial Class frmQuiz
         Me.heart3 = New System.Windows.Forms.PictureBox()
         Me.heart2 = New System.Windows.Forms.PictureBox()
         Me.heart1 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,6 +66,7 @@ Partial Class frmQuiz
         CType(Me.heart3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'BSquiz
@@ -301,12 +307,74 @@ Partial Class frmQuiz
         Me.heart1.TabIndex = 0
         Me.heart1.TabStop = False
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 66)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(200, 382)
+        Me.Panel1.TabIndex = 6
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(11, 31)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(171, 47)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "&Retry"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(11, 84)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(171, 47)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "&New"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(11, 137)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(171, 47)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "&Back"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(12, 18)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(67, 42)
+        Me.Button4.TabIndex = 7
+        Me.Button4.Text = "Menu"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'frmQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(933, 450)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lifePanel)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.txtQuestion)
@@ -326,6 +394,7 @@ Partial Class frmQuiz
         CType(Me.heart3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -362,4 +431,9 @@ Partial Class frmQuiz
     Friend WithEvents heart1 As PictureBox
     Friend WithEvents heart3 As PictureBox
     Friend WithEvents heart2 As PictureBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button4 As Button
 End Class
