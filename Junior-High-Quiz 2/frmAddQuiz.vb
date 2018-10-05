@@ -2,8 +2,9 @@
     Private Sub frmAddQuiz_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         disableEdit()
         btnAdd.Enabled = False
+        Me.Hide()
         Form1.Show()
-        Hide()
+
     End Sub
 
     Private Sub cboSubj_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSubj.SelectedIndexChanged
