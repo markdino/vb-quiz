@@ -25,7 +25,7 @@
         'LoadQuiz()
     End Sub
 
-    Private Sub frmQuiz_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+    Private Sub txtQuestion_Resize(sender As Object, e As EventArgs) Handles txtQuestion.Resize
         btnResponsive()
     End Sub
 
@@ -58,18 +58,23 @@
     End Function
 
     Private Sub btnResponsive()
-        Dim col6 As Integer = Width / 6
+        Dim col6 As Integer = txtQuestion.Width / 6
         Dim btnWidth As Integer = col6 * 2 - 10
-        btnA.Left = col6
-        btnB.Left = col6
-        btnC.Left = col6 * 3 + 10
-        btnD.Left = col6 * 3 + 10
+        Dim spanLeft As Integer = txtQuestion.Left
+        btnA.Left = col6 + spanLeft
+        btnB.Left = col6 + spanLeft
+        btnC.Left = col6 * 3 + 10 + spanLeft
+        btnD.Left = col6 * 3 + 10 + spanLeft
 
         btnA.Width = btnWidth
         btnB.Width = btnWidth
         btnC.Width = btnWidth
         btnD.Width = btnWidth
 
+        lblTitle.Width = col6 * 2
+        lblTitle.Left = col6 * 2 + spanLeft
+
+        lifePanel.Left = spanLeft
     End Sub
 
 
