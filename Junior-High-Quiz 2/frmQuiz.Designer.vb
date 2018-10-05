@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmQuiz
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmQuiz
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.BSquiz = New System.Windows.Forms.BindingSource(Me.components)
@@ -50,7 +50,6 @@ Partial Class frmQuiz
         Me.btnD = New System.Windows.Forms.Button()
         Me.txtQuestion = New System.Windows.Forms.TextBox()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,14 +105,15 @@ Partial Class frmQuiz
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.QuizDataGridViewTextBoxColumn, Me.ADataGridViewTextBoxColumn, Me.BDataGridViewTextBoxColumn, Me.CDataGridViewTextBoxColumn, Me.DDataGridViewTextBoxColumn, Me.NotesDataGridViewTextBoxColumn, Me.TakeDataGridViewCheckBoxColumn, Me.CorrectDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.BSquiz
-        Me.DataGridView1.Location = New System.Drawing.Point(-109, 54)
+        Me.DataGridView1.Location = New System.Drawing.Point(810, 54)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(872, 97)
+        Me.DataGridView1.Size = New System.Drawing.Size(198, 97)
         Me.DataGridView1.TabIndex = 0
         '
         'IDDataGridViewTextBoxColumn
@@ -181,6 +181,7 @@ Partial Class frmQuiz
         '
         'btnA
         '
+        Me.btnA.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnA.Location = New System.Drawing.Point(176, 299)
         Me.btnA.Name = "btnA"
         Me.btnA.Size = New System.Drawing.Size(172, 47)
@@ -190,6 +191,7 @@ Partial Class frmQuiz
         '
         'btnB
         '
+        Me.btnB.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnB.Location = New System.Drawing.Point(176, 371)
         Me.btnB.Name = "btnB"
         Me.btnB.Size = New System.Drawing.Size(172, 47)
@@ -199,6 +201,7 @@ Partial Class frmQuiz
         '
         'btnC
         '
+        Me.btnC.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnC.Location = New System.Drawing.Point(444, 299)
         Me.btnC.Name = "btnC"
         Me.btnC.Size = New System.Drawing.Size(172, 47)
@@ -208,6 +211,7 @@ Partial Class frmQuiz
         '
         'btnD
         '
+        Me.btnD.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnD.Location = New System.Drawing.Point(444, 371)
         Me.btnD.Name = "btnD"
         Me.btnD.Size = New System.Drawing.Size(172, 47)
@@ -217,11 +221,14 @@ Partial Class frmQuiz
         '
         'txtQuestion
         '
-        Me.txtQuestion.Location = New System.Drawing.Point(66, 169)
+        Me.txtQuestion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtQuestion.Location = New System.Drawing.Point(15, 66)
         Me.txtQuestion.Multiline = True
         Me.txtQuestion.Name = "txtQuestion"
         Me.txtQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtQuestion.Size = New System.Drawing.Size(671, 124)
+        Me.txtQuestion.Size = New System.Drawing.Size(773, 216)
         Me.txtQuestion.TabIndex = 3
         '
         'lblTitle
@@ -233,21 +240,11 @@ Partial Class frmQuiz
         Me.lblTitle.Text = "Label1"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(698, 367)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(64, 28)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'frmQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.txtQuestion)
         Me.Controls.Add(Me.btnC)
@@ -292,5 +289,4 @@ Partial Class frmQuiz
     Friend WithEvents btnD As Button
     Friend WithEvents txtQuestion As TextBox
     Friend WithEvents lblTitle As Label
-    Friend WithEvents Button1 As Button
 End Class
