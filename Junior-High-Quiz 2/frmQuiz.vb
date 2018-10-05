@@ -21,7 +21,12 @@
         'TODO: This line of code loads data into the 'QuizDataSet.AP' table. You can move, or remove it, as needed.
         Me.APTableAdapter.Fill(Me.QuizDataSet.AP)
 
-        LoadQuiz()
+        btnResponsive()
+        'LoadQuiz()
+    End Sub
+
+    Private Sub frmQuiz_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        btnResponsive()
     End Sub
 
     Public Sub LoadQuiz()
@@ -32,19 +37,16 @@
 
         End While
 
-        txtQuestion.Text = DataGridView1.Rows(x).Cells(1).Value
-        btnA.Text = DataGridView1.Rows(x).Cells(2).Value
-        btnB.Text = DataGridView1.Rows(x).Cells(3).Value
-        btnC.Text = DataGridView1.Rows(x).Cells(4).Value
-        btnD.Text = DataGridView1.Rows(x).Cells(5).Value
-        notes = DataGridView1.Rows(x).Cells(6).Value
-        correctAns = DataGridView1.Rows(x).Cells(8).Value
+        txtQuestion.Text = DataGridView1.Rows(x).Cells(1).Value.ToString
+        btnA.Text = DataGridView1.Rows(x).Cells(2).Value.ToString
+        btnB.Text = DataGridView1.Rows(x).Cells(3).Value.ToString
+        btnC.Text = DataGridView1.Rows(x).Cells(4).Value.ToString
+        btnD.Text = DataGridView1.Rows(x).Cells(5).Value.ToString
+        notes = DataGridView1.Rows(x).Cells(6).Value.ToString
+        correctAns = DataGridView1.Rows(x).Cells(8).Value.ToString
         DataGridView1.Rows(x).Cells(7).Value = True
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        LoadQuiz()
-    End Sub
 
     Function quizIndex()
         Dim i As Integer = Format((Rnd() * DataGridView1.RowCount - 1), "0")
@@ -54,4 +56,21 @@
 
         Return i
     End Function
+
+    Private Sub btnResponsive()
+        Dim col6 As Integer = Width / 6
+        Dim btnWidth As Integer = col6 * 2 - 10
+        btnA.Left = col6
+        btnB.Left = col6
+        btnC.Left = col6 * 3 + 10
+        btnD.Left = col6 * 3 + 10
+
+        btnA.Width = btnWidth
+        btnB.Width = btnWidth
+        btnC.Width = btnWidth
+        btnD.Width = btnWidth
+
+    End Sub
+
+
 End Class
