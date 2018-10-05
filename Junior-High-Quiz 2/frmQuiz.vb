@@ -57,6 +57,22 @@
         Return i
     End Function
 
+    Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
+        If menuPanel.Left >= 0 Then
+            menuPanel.Left -= menuPanel.Width
+            txtQuestion.Left -= menuPanel.Width
+            txtQuestion.Width += menuPanel.Width
+            btnMenu.Text = "|||"
+            btnMenu.Width = 37
+        ElseIf menuPanel.Left < 0 Then
+            menuPanel.Left = 0
+            txtQuestion.Left += menuPanel.Width
+            txtQuestion.Width -= menuPanel.Width
+            btnMenu.Text = "Menu"
+            btnMenu.Width = 63
+        End If
+    End Sub
+
     Private Sub btnResponsive()
         Dim col6 As Integer = txtQuestion.Width / 6
         Dim btnWidth As Integer = col6 * 2 - 10
