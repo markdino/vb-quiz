@@ -64,7 +64,7 @@ Partial Class Form1
         'btnAP
         '
         Me.btnAP.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnAP.ForeColor = System.Drawing.Color.White
+        Me.btnAP.ForeColor = System.Drawing.Color.Black
         Me.btnAP.Location = New System.Drawing.Point(21, 97)
         Me.btnAP.Name = "btnAP"
         Me.btnAP.Size = New System.Drawing.Size(201, 54)
@@ -199,7 +199,7 @@ Partial Class Form1
         'btnComp
         '
         Me.btnComp.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnComp.ForeColor = System.Drawing.Color.White
+        Me.btnComp.ForeColor = System.Drawing.Color.Black
         Me.btnComp.Location = New System.Drawing.Point(373, 97)
         Me.btnComp.Name = "btnComp"
         Me.btnComp.Size = New System.Drawing.Size(201, 54)
@@ -210,7 +210,7 @@ Partial Class Form1
         'btnEng
         '
         Me.btnEng.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnEng.ForeColor = System.Drawing.Color.White
+        Me.btnEng.ForeColor = System.Drawing.Color.Black
         Me.btnEng.Location = New System.Drawing.Point(21, 172)
         Me.btnEng.Name = "btnEng"
         Me.btnEng.Size = New System.Drawing.Size(201, 54)
@@ -221,7 +221,7 @@ Partial Class Form1
         'btnFil
         '
         Me.btnFil.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnFil.ForeColor = System.Drawing.Color.White
+        Me.btnFil.ForeColor = System.Drawing.Color.Black
         Me.btnFil.Location = New System.Drawing.Point(373, 172)
         Me.btnFil.Name = "btnFil"
         Me.btnFil.Size = New System.Drawing.Size(201, 54)
@@ -232,7 +232,7 @@ Partial Class Form1
         'btnMath
         '
         Me.btnMath.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnMath.ForeColor = System.Drawing.Color.White
+        Me.btnMath.ForeColor = System.Drawing.Color.Black
         Me.btnMath.Location = New System.Drawing.Point(21, 248)
         Me.btnMath.Name = "btnMath"
         Me.btnMath.Size = New System.Drawing.Size(201, 54)
@@ -243,7 +243,7 @@ Partial Class Form1
         'btnSci
         '
         Me.btnSci.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnSci.ForeColor = System.Drawing.Color.White
+        Me.btnSci.ForeColor = System.Drawing.Color.Black
         Me.btnSci.Location = New System.Drawing.Point(373, 248)
         Me.btnSci.Name = "btnSci"
         Me.btnSci.Size = New System.Drawing.Size(201, 54)
@@ -254,7 +254,7 @@ Partial Class Form1
         'btnTLE
         '
         Me.btnTLE.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnTLE.ForeColor = System.Drawing.Color.White
+        Me.btnTLE.ForeColor = System.Drawing.Color.Black
         Me.btnTLE.Location = New System.Drawing.Point(21, 323)
         Me.btnTLE.Name = "btnTLE"
         Me.btnTLE.Size = New System.Drawing.Size(201, 54)
@@ -265,7 +265,7 @@ Partial Class Form1
         'btnMap
         '
         Me.btnMap.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnMap.ForeColor = System.Drawing.Color.White
+        Me.btnMap.ForeColor = System.Drawing.Color.Black
         Me.btnMap.Location = New System.Drawing.Point(373, 323)
         Me.btnMap.Name = "btnMap"
         Me.btnMap.Size = New System.Drawing.Size(201, 54)
@@ -276,7 +276,7 @@ Partial Class Form1
         'btnVal
         '
         Me.btnVal.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnVal.ForeColor = System.Drawing.Color.White
+        Me.btnVal.ForeColor = System.Drawing.Color.Black
         Me.btnVal.Location = New System.Drawing.Point(194, 399)
         Me.btnVal.Name = "btnVal"
         Me.btnVal.Size = New System.Drawing.Size(201, 54)
