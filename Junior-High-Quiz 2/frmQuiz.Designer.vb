@@ -124,10 +124,10 @@ Partial Class frmQuiz
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.QuizDataGridViewTextBoxColumn, Me.ADataGridViewTextBoxColumn, Me.BDataGridViewTextBoxColumn, Me.CDataGridViewTextBoxColumn, Me.DDataGridViewTextBoxColumn, Me.NotesDataGridViewTextBoxColumn, Me.TakeDataGridViewCheckBoxColumn, Me.CorrectDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.BSquiz
-        Me.DataGridView1.Location = New System.Drawing.Point(945, 54)
+        Me.DataGridView1.Location = New System.Drawing.Point(942, 323)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(231, 97)
+        Me.DataGridView1.Size = New System.Drawing.Size(302, 97)
         Me.DataGridView1.TabIndex = 0
         '
         'IDDataGridViewTextBoxColumn
@@ -374,6 +374,7 @@ Partial Class frmQuiz
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(933, 450)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnMenu)
         Me.Controls.Add(Me.menuPanel)
         Me.Controls.Add(Me.lifePanel)
@@ -383,7 +384,6 @@ Partial Class frmQuiz
         Me.Controls.Add(Me.btnD)
         Me.Controls.Add(Me.btnB)
         Me.Controls.Add(Me.btnA)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MinimumSize = New System.Drawing.Size(949, 489)
         Me.Name = "frmQuiz"
