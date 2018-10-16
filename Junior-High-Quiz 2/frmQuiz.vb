@@ -17,13 +17,22 @@
 
         btnResponsive()
         quizFilter()
-        'LoadQuiz()
+        checkQuizCount()
     End Sub
 
     Private Sub txtQuestion_Resize(sender As Object, e As EventArgs) Handles txtQuestion.Resize
         btnResponsive()
     End Sub
 
+    Private Sub checkQuizCount()
+        Dim rowCountCheck As Integer = DataGridView1.RowCount
+        If rowCountCheck > 2 Then
+            LoadQuiz()
+        Else
+            MsgBox("Not enough quiz to load." & vbCrLf & "Please contact administrator to fix and load more quiz.", vbExclamation, "Warning")
+            Close()
+        End If
+    End Sub
     Public Sub LoadQuiz()
         Dim x As String = quizIndex()
         While DataGridView1.Rows(x).Cells(7).Value = True
