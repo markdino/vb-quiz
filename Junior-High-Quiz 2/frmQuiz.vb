@@ -22,6 +22,7 @@
         Me.APTableAdapter.Fill(Me.QuizDataSet.AP)
 
         btnResponsive()
+        quizFilter()
         'LoadQuiz()
     End Sub
 
@@ -56,6 +57,9 @@
 
         Return i
     End Function
+    Private Sub quizFilter()
+        BSquiz.Filter = "take = " & False
+    End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
         If menuPanel.Left >= 0 Then
