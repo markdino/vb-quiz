@@ -1,5 +1,6 @@
 ﻿Public Class frmQuiz
     Dim correctAns, notes As String
+    Dim globalIndex As Integer
 
     Private Sub frmQuiz_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'QuizDataSet.Values' table. You can move, or remove it, as needed.
@@ -17,13 +18,22 @@
 
         btnResponsive()
         quizFilter()
-        'LoadQuiz()
+        checkQuizCount()
     End Sub
 
     Private Sub txtQuestion_Resize(sender As Object, e As EventArgs) Handles txtQuestion.Resize
         btnResponsive()
     End Sub
 
+    Private Sub checkQuizCount()
+        Dim rowCountCheck As Integer = DataGridView1.RowCount
+        If rowCountCheck > 2 Then
+            LoadQuiz()
+        Else
+            MsgBox("Not enough quiz to load." & vbCrLf & "Please contact administrator to fix and load more quiz.", vbExclamation, "Warning")
+            Close()
+        End If
+    End Sub
     Public Sub LoadQuiz()
         Dim x As String = quizIndex()
         While DataGridView1.Rows(x).Cells(7).Value = True
@@ -40,6 +50,8 @@
         notes = DataGridView1.Rows(x).Cells(6).Value.ToString
         correctAns = DataGridView1.Rows(x).Cells(8).Value.ToString
         DataGridView1.Rows(x).Cells(7).Value = True
+
+        globalIndex = x
     End Sub
 
 
@@ -70,12 +82,62 @@
             btnMenu.Width = 63
         End If
     End Sub
-
-    Private Sub lblTitle_TextChanged(sender As Object, e As EventArgs) Handles lblTitle.TextChanged
-        'BSquiz.DataMember = lblTitle.Text
+    Private Sub SaveTake()
+        Validate()
+        BSquiz.EndEdit()
+        UpdateData()
+    End Sub
+    Private Sub UpdateData()
+        If lblTitle.Text = "Math" Then
+            MathTableAdapter.Update(QuizDataSet)
+        ElseIf lblTitle.Text = "Science" Then
+            ScienceTableAdapter.Update(QuizDataSet)
+        ElseIf lblTitle.Text = "AP" Then
+            APTableAdapter.Update(QuizDataSet)
+        ElseIf lblTitle.Text = "Computer" Then
+            ComputerTableAdapter.Update(QuizDataSet)
+        ElseIf lblTitle.Text = "English" Then
+            EnglishTableAdapter.Update(QuizDataSet)
+        ElseIf lblTitle.Text = "Filipino" Then
+            FilipinoTableAdapter.Update(QuizDataSet)
+        ElseIf lblTitle.Text = "Mapeh" Then
+            MapehTableAdapter.Update(QuizDataSet)
+        ElseIf lblTitle.Text = "TLE" Then
+            TLETableAdapter.Update(QuizDataSet)
+        ElseIf lblTitle.Text = "Values" Then
+            ValuesTableAdapter.Update(QuizDataSet)
+        End If
+    End Sub
+    Private Sub reloadTable()
+        If lblTitle.Text = "Math" Then
+            Me.MathTableAdapter.Fill(Me.QuizDataSet.Math)
+        ElseIf lblTitle.Text = "Science" Then
+            ScienceTableAdapter.Fill(QuizDataSet.Science)
+        ElseIf lblTitle.Text = "AP" Then
+            APTableAdapter.Fill(QuizDataSet.AP)
+        ElseIf lblTitle.Text = "Computer" Then
+            ComputerTableAdapter.Fill(QuizDataSet.Computer)
+        ElseIf lblTitle.Text = "English" Then
+            EnglishTableAdapter.Fill(QuizDataSet.English)
+        ElseIf lblTitle.Text = "Filipino" Then
+            FilipinoTableAdapter.Fill(QuizDataSet.Filipino)
+        ElseIf lblTitle.Text = "Mapeh" Then
+            MapehTableAdapter.Fill(QuizDataSet.Mapeh)
+        ElseIf lblTitle.Text = "TLE" Then
+            TLETableAdapter.Fill(QuizDataSet.TLE)
+        ElseIf lblTitle.Text = "Values" Then
+            ValuesTableAdapter.Fill(QuizDataSet.Values)
+        End If
+    End Sub
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        'DataGridView1.Rows(globalIndex).Cells(7).Value = False
+        reloadTable()
+        quizFilter()
+        checkQuizCount()
+        'frmQuiz_Load(sender, e)
     End Sub
 
-    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
+    Private Sub btnB_Click(sender As Object, e As EventArgs) Handles btnB.Click
 
     End Sub
 

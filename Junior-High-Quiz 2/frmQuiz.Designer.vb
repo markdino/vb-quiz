@@ -56,7 +56,7 @@ Partial Class frmQuiz
         Me.heart1 = New System.Windows.Forms.PictureBox()
         Me.menuPanel = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.Button()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,10 +124,10 @@ Partial Class frmQuiz
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.QuizDataGridViewTextBoxColumn, Me.ADataGridViewTextBoxColumn, Me.BDataGridViewTextBoxColumn, Me.CDataGridViewTextBoxColumn, Me.DDataGridViewTextBoxColumn, Me.NotesDataGridViewTextBoxColumn, Me.TakeDataGridViewCheckBoxColumn, Me.CorrectDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.BSquiz
-        Me.DataGridView1.Location = New System.Drawing.Point(935, 301)
+        Me.DataGridView1.Location = New System.Drawing.Point(934, 287)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(298, 97)
+        Me.DataGridView1.Size = New System.Drawing.Size(848, 154)
         Me.DataGridView1.TabIndex = 0
         '
         'IDDataGridViewTextBoxColumn
@@ -250,6 +250,7 @@ Partial Class frmQuiz
         Me.txtQuestion.Location = New System.Drawing.Point(234, 66)
         Me.txtQuestion.Multiline = True
         Me.txtQuestion.Name = "txtQuestion"
+        Me.txtQuestion.ReadOnly = True
         Me.txtQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtQuestion.Size = New System.Drawing.Size(684, 216)
         Me.txtQuestion.TabIndex = 3
@@ -314,7 +315,7 @@ Partial Class frmQuiz
         Me.menuPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.menuPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.menuPanel.Controls.Add(Me.Button3)
-        Me.menuPanel.Controls.Add(Me.Button2)
+        Me.menuPanel.Controls.Add(Me.btnNext)
         Me.menuPanel.Controls.Add(Me.Button1)
         Me.menuPanel.Location = New System.Drawing.Point(0, 66)
         Me.menuPanel.Name = "menuPanel"
@@ -333,17 +334,17 @@ Partial Class frmQuiz
         Me.Button3.Text = "&Back"
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnNext
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(11, 84)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(171, 47)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "&New"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnNext.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNext.Location = New System.Drawing.Point(11, 84)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(171, 47)
+        Me.btnNext.TabIndex = 2
+        Me.btnNext.Text = "&Next"
+        Me.btnNext.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -434,7 +435,7 @@ Partial Class frmQuiz
     Friend WithEvents heart2 As PictureBox
     Friend WithEvents menuPanel As Panel
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnNext As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents btnMenu As Button
 End Class
