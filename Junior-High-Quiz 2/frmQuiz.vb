@@ -13,6 +13,8 @@
         Me.ComputerTableAdapter.Fill(Me.QuizDataSet.Computer)
         Me.APTableAdapter.Fill(Me.QuizDataSet.AP)
 
+        BSquiz.DataMember = lblTitle.Text
+
         btnResponsive()
         quizFilter()
         'LoadQuiz()
@@ -67,6 +69,14 @@
             btnMenu.Text = "Menu"
             btnMenu.Width = 63
         End If
+    End Sub
+
+    Private Sub lblTitle_TextChanged(sender As Object, e As EventArgs) Handles lblTitle.TextChanged
+        'BSquiz.DataMember = lblTitle.Text
+    End Sub
+
+    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
+
     End Sub
 
     Private Sub btnResponsive()
