@@ -25,6 +25,16 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.btnAP = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnComp = New System.Windows.Forms.Button()
+        Me.btnEng = New System.Windows.Forms.Button()
+        Me.btnFil = New System.Windows.Forms.Button()
+        Me.btnMath = New System.Windows.Forms.Button()
+        Me.btnSci = New System.Windows.Forms.Button()
+        Me.btnTLE = New System.Windows.Forms.Button()
+        Me.btnMap = New System.Windows.Forms.Button()
+        Me.btnVal = New System.Windows.Forms.Button()
+        Me.mainPanel = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QuizDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,20 +55,12 @@ Partial Class Form1
         Me.ScienceTableAdapter = New Junior_High_Quiz_2.quizDataSetTableAdapters.ScienceTableAdapter()
         Me.TLETableAdapter = New Junior_High_Quiz_2.quizDataSetTableAdapters.TLETableAdapter()
         Me.ValuesTableAdapter = New Junior_High_Quiz_2.quizDataSetTableAdapters.ValuesTableAdapter()
-        Me.btnComp = New System.Windows.Forms.Button()
-        Me.btnEng = New System.Windows.Forms.Button()
-        Me.btnFil = New System.Windows.Forms.Button()
-        Me.btnMath = New System.Windows.Forms.Button()
-        Me.btnSci = New System.Windows.Forms.Button()
-        Me.btnTLE = New System.Windows.Forms.Button()
-        Me.btnMap = New System.Windows.Forms.Button()
-        Me.btnVal = New System.Windows.Forms.Button()
-        Me.mainPanel = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblUser = New System.Windows.Forms.Label()
+        Me.lblLogout = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.mainPanel.SuspendLayout()
         CType(Me.QuizDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.mainPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnAP
@@ -86,115 +88,6 @@ Partial Class Form1
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(401, 143)
         Me.DataGridView1.TabIndex = 1
-        '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'QuizDataGridViewTextBoxColumn
-        '
-        Me.QuizDataGridViewTextBoxColumn.DataPropertyName = "Quiz"
-        Me.QuizDataGridViewTextBoxColumn.HeaderText = "Quiz"
-        Me.QuizDataGridViewTextBoxColumn.Name = "QuizDataGridViewTextBoxColumn"
-        Me.QuizDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ADataGridViewTextBoxColumn
-        '
-        Me.ADataGridViewTextBoxColumn.DataPropertyName = "A"
-        Me.ADataGridViewTextBoxColumn.HeaderText = "A"
-        Me.ADataGridViewTextBoxColumn.Name = "ADataGridViewTextBoxColumn"
-        Me.ADataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BDataGridViewTextBoxColumn
-        '
-        Me.BDataGridViewTextBoxColumn.DataPropertyName = "B"
-        Me.BDataGridViewTextBoxColumn.HeaderText = "B"
-        Me.BDataGridViewTextBoxColumn.Name = "BDataGridViewTextBoxColumn"
-        Me.BDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CDataGridViewTextBoxColumn
-        '
-        Me.CDataGridViewTextBoxColumn.DataPropertyName = "C"
-        Me.CDataGridViewTextBoxColumn.HeaderText = "C"
-        Me.CDataGridViewTextBoxColumn.Name = "CDataGridViewTextBoxColumn"
-        Me.CDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DDataGridViewTextBoxColumn
-        '
-        Me.DDataGridViewTextBoxColumn.DataPropertyName = "D"
-        Me.DDataGridViewTextBoxColumn.HeaderText = "D"
-        Me.DDataGridViewTextBoxColumn.Name = "DDataGridViewTextBoxColumn"
-        Me.DDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NotesDataGridViewTextBoxColumn
-        '
-        Me.NotesDataGridViewTextBoxColumn.DataPropertyName = "Notes"
-        Me.NotesDataGridViewTextBoxColumn.HeaderText = "Notes"
-        Me.NotesDataGridViewTextBoxColumn.Name = "NotesDataGridViewTextBoxColumn"
-        Me.NotesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TakeDataGridViewCheckBoxColumn
-        '
-        Me.TakeDataGridViewCheckBoxColumn.DataPropertyName = "take"
-        Me.TakeDataGridViewCheckBoxColumn.HeaderText = "take"
-        Me.TakeDataGridViewCheckBoxColumn.Name = "TakeDataGridViewCheckBoxColumn"
-        Me.TakeDataGridViewCheckBoxColumn.ReadOnly = True
-        '
-        'CorrectDataGridViewTextBoxColumn
-        '
-        Me.CorrectDataGridViewTextBoxColumn.DataPropertyName = "Correct"
-        Me.CorrectDataGridViewTextBoxColumn.HeaderText = "Correct"
-        Me.CorrectDataGridViewTextBoxColumn.Name = "CorrectDataGridViewTextBoxColumn"
-        Me.CorrectDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'QuizDataSetBindingSource
-        '
-        Me.QuizDataSetBindingSource.DataMember = "Values"
-        Me.QuizDataSetBindingSource.DataSource = Me.QuizDataSet
-        '
-        'QuizDataSet
-        '
-        Me.QuizDataSet.DataSetName = "quizDataSet"
-        Me.QuizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'APTableAdapter
-        '
-        Me.APTableAdapter.ClearBeforeFill = True
-        '
-        'ComputerTableAdapter
-        '
-        Me.ComputerTableAdapter.ClearBeforeFill = True
-        '
-        'EnglishTableAdapter
-        '
-        Me.EnglishTableAdapter.ClearBeforeFill = True
-        '
-        'FilipinoTableAdapter
-        '
-        Me.FilipinoTableAdapter.ClearBeforeFill = True
-        '
-        'MapehTableAdapter
-        '
-        Me.MapehTableAdapter.ClearBeforeFill = True
-        '
-        'MathTableAdapter
-        '
-        Me.MathTableAdapter.ClearBeforeFill = True
-        '
-        'ScienceTableAdapter
-        '
-        Me.ScienceTableAdapter.ClearBeforeFill = True
-        '
-        'TLETableAdapter
-        '
-        Me.TLETableAdapter.ClearBeforeFill = True
-        '
-        'ValuesTableAdapter
-        '
-        Me.ValuesTableAdapter.ClearBeforeFill = True
         '
         'btnComp
         '
@@ -314,21 +207,153 @@ Partial Class Form1
         Me.Label1.Text = "Subject"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QuizDataGridViewTextBoxColumn
+        '
+        Me.QuizDataGridViewTextBoxColumn.DataPropertyName = "Quiz"
+        Me.QuizDataGridViewTextBoxColumn.HeaderText = "Quiz"
+        Me.QuizDataGridViewTextBoxColumn.Name = "QuizDataGridViewTextBoxColumn"
+        Me.QuizDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ADataGridViewTextBoxColumn
+        '
+        Me.ADataGridViewTextBoxColumn.DataPropertyName = "A"
+        Me.ADataGridViewTextBoxColumn.HeaderText = "A"
+        Me.ADataGridViewTextBoxColumn.Name = "ADataGridViewTextBoxColumn"
+        Me.ADataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'BDataGridViewTextBoxColumn
+        '
+        Me.BDataGridViewTextBoxColumn.DataPropertyName = "B"
+        Me.BDataGridViewTextBoxColumn.HeaderText = "B"
+        Me.BDataGridViewTextBoxColumn.Name = "BDataGridViewTextBoxColumn"
+        Me.BDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CDataGridViewTextBoxColumn
+        '
+        Me.CDataGridViewTextBoxColumn.DataPropertyName = "C"
+        Me.CDataGridViewTextBoxColumn.HeaderText = "C"
+        Me.CDataGridViewTextBoxColumn.Name = "CDataGridViewTextBoxColumn"
+        Me.CDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DDataGridViewTextBoxColumn
+        '
+        Me.DDataGridViewTextBoxColumn.DataPropertyName = "D"
+        Me.DDataGridViewTextBoxColumn.HeaderText = "D"
+        Me.DDataGridViewTextBoxColumn.Name = "DDataGridViewTextBoxColumn"
+        Me.DDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NotesDataGridViewTextBoxColumn
+        '
+        Me.NotesDataGridViewTextBoxColumn.DataPropertyName = "Notes"
+        Me.NotesDataGridViewTextBoxColumn.HeaderText = "Notes"
+        Me.NotesDataGridViewTextBoxColumn.Name = "NotesDataGridViewTextBoxColumn"
+        Me.NotesDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TakeDataGridViewCheckBoxColumn
+        '
+        Me.TakeDataGridViewCheckBoxColumn.DataPropertyName = "take"
+        Me.TakeDataGridViewCheckBoxColumn.HeaderText = "take"
+        Me.TakeDataGridViewCheckBoxColumn.Name = "TakeDataGridViewCheckBoxColumn"
+        Me.TakeDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'CorrectDataGridViewTextBoxColumn
+        '
+        Me.CorrectDataGridViewTextBoxColumn.DataPropertyName = "Correct"
+        Me.CorrectDataGridViewTextBoxColumn.HeaderText = "Correct"
+        Me.CorrectDataGridViewTextBoxColumn.Name = "CorrectDataGridViewTextBoxColumn"
+        Me.CorrectDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QuizDataSetBindingSource
+        '
+        Me.QuizDataSetBindingSource.DataMember = "Values"
+        Me.QuizDataSetBindingSource.DataSource = Me.QuizDataSet
+        '
+        'QuizDataSet
+        '
+        Me.QuizDataSet.DataSetName = "quizDataSet"
+        Me.QuizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'APTableAdapter
+        '
+        Me.APTableAdapter.ClearBeforeFill = True
+        '
+        'ComputerTableAdapter
+        '
+        Me.ComputerTableAdapter.ClearBeforeFill = True
+        '
+        'EnglishTableAdapter
+        '
+        Me.EnglishTableAdapter.ClearBeforeFill = True
+        '
+        'FilipinoTableAdapter
+        '
+        Me.FilipinoTableAdapter.ClearBeforeFill = True
+        '
+        'MapehTableAdapter
+        '
+        Me.MapehTableAdapter.ClearBeforeFill = True
+        '
+        'MathTableAdapter
+        '
+        Me.MathTableAdapter.ClearBeforeFill = True
+        '
+        'ScienceTableAdapter
+        '
+        Me.ScienceTableAdapter.ClearBeforeFill = True
+        '
+        'TLETableAdapter
+        '
+        Me.TLETableAdapter.ClearBeforeFill = True
+        '
+        'ValuesTableAdapter
+        '
+        Me.ValuesTableAdapter.ClearBeforeFill = True
+        '
+        'lblUser
+        '
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Location = New System.Drawing.Point(693, 9)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(45, 16)
+        Me.lblUser.TabIndex = 3
+        Me.lblUser.Text = "User:"
+        '
+        'lblLogout
+        '
+        Me.lblLogout.AutoSize = True
+        Me.lblLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogout.Location = New System.Drawing.Point(739, 9)
+        Me.lblLogout.Name = "lblLogout"
+        Me.lblLogout.Size = New System.Drawing.Size(49, 16)
+        Me.lblLogout.TabIndex = 3
+        Me.lblLogout.Text = "Logout"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 534)
+        Me.Controls.Add(Me.lblLogout)
+        Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.mainPanel)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.mainPanel.ResumeLayout(False)
         CType(Me.QuizDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.mainPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -364,4 +389,6 @@ Partial Class Form1
     Friend WithEvents btnVal As Button
     Friend WithEvents mainPanel As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents lblUser As Label
+    Friend WithEvents lblLogout As Label
 End Class
