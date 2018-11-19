@@ -60,8 +60,7 @@
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Close()
-
+        End
     End Sub
 
     Private Sub frmUser_Activated(sender As Object, e As EventArgs) Handles Me.Activated
