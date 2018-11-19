@@ -438,6 +438,7 @@ Partial Class frmAddQuiz
         Me.Name = "frmAddQuiz"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add Quiz"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

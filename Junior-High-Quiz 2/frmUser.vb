@@ -5,7 +5,6 @@
     Private Sub frmUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim objreader As New System.IO.StreamReader(userFile)
         userList = objreader.ReadToEnd
-        'MsgBox(objreader.ReadToEnd.Length)
         cboUser.Items.AddRange(IO.File.ReadAllLines(userFile))
         objreader.Close()
     End Sub
@@ -23,10 +22,18 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If cboUser.Text.Length > 1 Then
+        Dim userReady As Boolean = False
+        If cboUser.Text = "Admin" Then
+            frmAddQuiz.Show()
+            frmAddQuiz.WindowState = FormWindowState.Maximized
+            Form1.lblUser.Text = cboUser.Text
+            Close()
+        ElseIf cboUser.Text.Length > 1 Then
+            userReady = True
             If newUser = True Then
                 If cboUser.Items.Contains(cboUser.Text) Then
                     MsgBox("Username already taken!", MsgBoxStyle.Exclamation, "User")
+                    userReady = False
                 Else
                     cboUser.Items.Add(cboUser.Text)
 
@@ -35,11 +42,11 @@
                     objWriter.Close()
                     MsgBox(cboUser.Text & vbCrLf & userList)
 
-                    Form1.lblUser.Text = cboUser.Text
-                    Form1.Show()
-                    Close()
+                    userReady = True
                 End If
-            Else
+
+            End If
+            If userReady = True Then
                 Form1.lblUser.Text = cboUser.Text
                 Form1.Show()
                 Close()
@@ -50,11 +57,15 @@
 
         End If
 
-
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Close()
+
+    End Sub
+
+    Private Sub frmUser_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        frmAddQuiz.Hide()
 
     End Sub
 End Class

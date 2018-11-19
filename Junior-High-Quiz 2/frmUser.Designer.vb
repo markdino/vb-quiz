@@ -79,9 +79,13 @@ Partial Class frmUser
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(468, 308)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
+        Me.MaximumSize = New System.Drawing.Size(484, 347)
+        Me.MinimumSize = New System.Drawing.Size(484, 347)
         Me.Name = "frmUser"
-        Me.Text = "frmUser"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "LogIn form"
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
