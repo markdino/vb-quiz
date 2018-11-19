@@ -28,7 +28,7 @@
     End Sub
 
     Private Sub respondUserUI()
-        lblLogout.Left = (Width - lblLogout.Width) - 20
+        lblLogout.Left = (Width - lblLogout.Width) - 30
         lblUser.Left = (lblLogout.Left - lblUser.Width) - 5
     End Sub
 
@@ -43,4 +43,25 @@
         sender.forecolor = Color.Black
     End Sub
 
+    Private Sub lblLogout_Click(sender As Object, e As EventArgs) Handles lblLogout.Click
+        frmUser.Show()
+        Close()
+
+    End Sub
+
+    Private Sub lblLogout_MouseHover(sender As Object, e As EventArgs) Handles lblLogout.MouseHover
+        lblLogout.ForeColor = Color.Red
+
+    End Sub
+
+    Private Sub lblLogout_MouseLeave(sender As Object, e As EventArgs) Handles lblLogout.MouseLeave
+        lblLogout.ForeColor = Color.Black
+        lblLogout.Font = New Font(lblLogout.Font, FontStyle.Regular)
+
+    End Sub
+
+    Private Sub lblLogout_MouseEnter(sender As Object, e As EventArgs) Handles lblLogout.MouseEnter
+        lblLogout.Font = New Font(lblLogout.Font, FontStyle.Bold)
+
+    End Sub
 End Class

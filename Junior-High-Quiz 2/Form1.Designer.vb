@@ -329,6 +329,7 @@ Partial Class Form1
         'lblLogout
         '
         Me.lblLogout.AutoSize = True
+        Me.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLogout.Location = New System.Drawing.Point(739, 9)
         Me.lblLogout.Name = "lblLogout"
@@ -341,7 +342,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 534)
+        Me.ClientSize = New System.Drawing.Size(800, 557)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblLogout)
         Me.Controls.Add(Me.lblUser)
