@@ -105,6 +105,7 @@
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Hide()
+        Form1.Show()
     End Sub
 
     Private Sub txtID_TextChanged(sender As Object, e As EventArgs) Handles txtID.TextChanged
