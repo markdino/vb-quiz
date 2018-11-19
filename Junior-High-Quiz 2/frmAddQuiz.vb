@@ -3,8 +3,9 @@
         disableEdit()
         btnAdd.Enabled = False
         Me.Hide()
-        Form1.Show()
+        'Form1.Show()
 
+        frmUser.Show()
     End Sub
 
     Private Sub cboSubj_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSubj.SelectedIndexChanged

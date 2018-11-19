@@ -91,6 +91,12 @@
     <Compile Include="frmQuiz.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmUser.Designer.vb">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuiz.resx">
       <DependentUpon>frmQuiz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
