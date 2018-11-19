@@ -23,10 +23,16 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If cboUser.Text.Length > 1 Then
+        Dim userReady As Boolean = False
+        If cboUser.Text = "Admin" Then
+            frmAddQuiz.Show()
+            Close()
+        ElseIf cboUser.Text.Length > 1 Then
+            userReady = True
             If newUser = True Then
                 If cboUser.Items.Contains(cboUser.Text) Then
                     MsgBox("Username already taken!", MsgBoxStyle.Exclamation, "User")
+                    userReady = False
                 Else
                     cboUser.Items.Add(cboUser.Text)
 
@@ -35,11 +41,11 @@
                     objWriter.Close()
                     MsgBox(cboUser.Text & vbCrLf & userList)
 
-                    Form1.lblUser.Text = cboUser.Text
-                    Form1.Show()
-                    Close()
+                    userReady = True
                 End If
-            Else
+
+            End If
+            If userReady = True Then
                 Form1.lblUser.Text = cboUser.Text
                 Form1.Show()
                 Close()
@@ -49,7 +55,6 @@
             MsgBox("Invalid Username, Please use another username.", vbExclamation, "Invalid")
 
         End If
-
 
     End Sub
 
