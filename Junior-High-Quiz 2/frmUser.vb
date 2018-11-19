@@ -25,6 +25,7 @@
         Dim userReady As Boolean = False
         If cboUser.Text = "Admin" Then
             frmAddQuiz.Show()
+            frmAddQuiz.WindowState = FormWindowState.Maximized
             Close()
         ElseIf cboUser.Text.Length > 1 Then
             userReady = True
