@@ -12,11 +12,12 @@
         Me.APTableAdapter.Fill(Me.QuizDataSet.AP)
 
         centerPanel()
-
+        respondUserUI()
     End Sub
 
     Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         centerPanel()
+        respondUserUI()
     End Sub
     Private Sub centerPanel()
         Dim myWidth As Integer = mainPanel.Width
@@ -24,6 +25,11 @@
 
         mainPanel.Left = (Width - myWidth) / 2
         mainPanel.Top = (Height - myHeight) / 2
+    End Sub
+
+    Private Sub respondUserUI()
+        lblLogout.Left = (Width - lblLogout.Width) - 20
+        lblUser.Left = (lblLogout.Left - lblUser.Width) - 5
     End Sub
 
     Private Sub Button_Click(sender As Object, e As EventArgs) Handles btnAP.Click, btnVal.Click, btnMap.Click, btnTLE.Click, btnSci.Click, btnMath.Click, btnFil.Click, btnEng.Click, btnComp.Click
