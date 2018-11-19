@@ -5,7 +5,6 @@
     Private Sub frmUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim objreader As New System.IO.StreamReader(userFile)
         userList = objreader.ReadToEnd
-        'MsgBox(objreader.ReadToEnd.Length)
         cboUser.Items.AddRange(IO.File.ReadAllLines(userFile))
         objreader.Close()
     End Sub
@@ -60,6 +59,11 @@
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Close()
+
+    End Sub
+
+    Private Sub frmUser_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        frmAddQuiz.Hide()
 
     End Sub
 End Class
