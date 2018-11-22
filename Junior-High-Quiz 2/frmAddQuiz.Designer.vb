@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAddQuiz
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmAddQuiz
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.BSquiz = New System.Windows.Forms.BindingSource(Me.components)
@@ -63,7 +63,7 @@ Partial Class frmAddQuiz
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.cboSubj = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,7 +134,7 @@ Partial Class frmAddQuiz
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(745, 243)
-        Me.DataGridView1.TabIndex = 0
+        Me.DataGridView1.TabIndex = 1
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -217,7 +217,7 @@ Partial Class frmAddQuiz
         Me.txtID.Name = "txtID"
         Me.txtID.ReadOnly = True
         Me.txtID.Size = New System.Drawing.Size(66, 26)
-        Me.txtID.TabIndex = 2
+        Me.txtID.TabIndex = 14
         '
         'Label2
         '
@@ -262,7 +262,7 @@ Partial Class frmAddQuiz
         Me.txtA.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtA.Name = "txtA"
         Me.txtA.Size = New System.Drawing.Size(146, 26)
-        Me.txtA.TabIndex = 2
+        Me.txtA.TabIndex = 3
         '
         'txtC
         '
@@ -272,7 +272,7 @@ Partial Class frmAddQuiz
         Me.txtC.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtC.Name = "txtC"
         Me.txtC.Size = New System.Drawing.Size(146, 26)
-        Me.txtC.TabIndex = 2
+        Me.txtC.TabIndex = 5
         '
         'txtB
         '
@@ -282,7 +282,7 @@ Partial Class frmAddQuiz
         Me.txtB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtB.Name = "txtB"
         Me.txtB.Size = New System.Drawing.Size(146, 26)
-        Me.txtB.TabIndex = 2
+        Me.txtB.TabIndex = 4
         '
         'txtD
         '
@@ -292,7 +292,7 @@ Partial Class frmAddQuiz
         Me.txtD.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtD.Name = "txtD"
         Me.txtD.Size = New System.Drawing.Size(146, 26)
-        Me.txtD.TabIndex = 2
+        Me.txtD.TabIndex = 6
         '
         'Label4
         '
@@ -313,7 +313,7 @@ Partial Class frmAddQuiz
         Me.txtCorrect.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCorrect.Name = "txtCorrect"
         Me.txtCorrect.Size = New System.Drawing.Size(146, 26)
-        Me.txtCorrect.TabIndex = 2
+        Me.txtCorrect.TabIndex = 7
         '
         'Label5
         '
@@ -337,73 +337,82 @@ Partial Class frmAddQuiz
         Me.txtNotes.Name = "txtNotes"
         Me.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtNotes.Size = New System.Drawing.Size(310, 70)
-        Me.txtNotes.TabIndex = 2
+        Me.txtNotes.TabIndex = 8
         '
         'btnAdd
         '
-        Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAdd.Location = New System.Drawing.Point(330, 567)
+        Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnAdd.Location = New System.Drawing.Point(26, 570)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(100, 39)
-        Me.btnAdd.TabIndex = 3
+        Me.btnAdd.TabIndex = 9
         Me.btnAdd.Text = "&Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'btnSave
         '
-        Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSave.Location = New System.Drawing.Point(436, 567)
+        Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnSave.Location = New System.Drawing.Point(132, 570)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(100, 39)
-        Me.btnSave.TabIndex = 3
+        Me.btnSave.TabIndex = 10
         Me.btnSave.Text = "&Save"
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'btnClear
         '
-        Me.btnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnClear.Location = New System.Drawing.Point(567, 567)
+        Me.btnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnClear.BackColor = System.Drawing.Color.White
+        Me.btnClear.Location = New System.Drawing.Point(263, 570)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(100, 39)
-        Me.btnClear.TabIndex = 3
+        Me.btnClear.TabIndex = 11
         Me.btnClear.Text = "&Clear"
-        Me.btnClear.UseVisualStyleBackColor = True
+        Me.btnClear.UseVisualStyleBackColor = False
         '
         'btnDelete
         '
-        Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnDelete.Location = New System.Drawing.Point(673, 567)
+        Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnDelete.Location = New System.Drawing.Point(369, 570)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(100, 39)
-        Me.btnDelete.TabIndex = 3
+        Me.btnDelete.TabIndex = 12
         Me.btnDelete.Text = "&Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
+        Me.btnDelete.UseVisualStyleBackColor = False
         '
         'cboSubj
         '
+        Me.cboSubj.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboSubj.FormattingEnabled = True
         Me.cboSubj.Items.AddRange(New Object() {"AP", "Computer", "Math", "English", "Filipino", "Mapeh", "Science", "TLE", "Values"})
         Me.cboSubj.Location = New System.Drawing.Point(18, 14)
         Me.cboSubj.Name = "cboSubj"
         Me.cboSubj.Size = New System.Drawing.Size(253, 28)
-        Me.cboSubj.TabIndex = 4
+        Me.cboSubj.TabIndex = 0
         Me.cboSubj.Text = "Select Subject Here . . ."
         '
-        'Button1
+        'btnExit
         '
-        Me.Button1.Location = New System.Drawing.Point(210, 581)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(84, 24)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.Location = New System.Drawing.Point(690, 570)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(84, 39)
+        Me.btnExit.TabIndex = 13
+        Me.btnExit.Text = "&Exit"
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'frmAddQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Pink
         Me.ClientSize = New System.Drawing.Size(786, 626)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.cboSubj)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnClear)
@@ -429,6 +438,7 @@ Partial Class frmAddQuiz
         Me.Name = "frmAddQuiz"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add Quiz"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -477,5 +487,5 @@ Partial Class frmAddQuiz
     Friend WithEvents btnClear As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents cboSubj As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnExit As Button
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmQuiz
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmQuiz
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.BSquiz = New System.Windows.Forms.BindingSource(Me.components)
@@ -50,10 +50,23 @@ Partial Class frmQuiz
         Me.btnD = New System.Windows.Forms.Button()
         Me.txtQuestion = New System.Windows.Forms.TextBox()
         Me.lblTitle = New System.Windows.Forms.Label()
+        Me.lifePanel = New System.Windows.Forms.Panel()
+        Me.heart3 = New System.Windows.Forms.PictureBox()
+        Me.heart2 = New System.Windows.Forms.PictureBox()
+        Me.heart1 = New System.Windows.Forms.PictureBox()
+        Me.menuPanel = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnMenu = New System.Windows.Forms.Button()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lifePanel.SuspendLayout()
+        CType(Me.heart3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.heart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.heart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.menuPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'BSquiz
@@ -106,14 +119,15 @@ Partial Class frmQuiz
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.QuizDataGridViewTextBoxColumn, Me.ADataGridViewTextBoxColumn, Me.BDataGridViewTextBoxColumn, Me.CDataGridViewTextBoxColumn, Me.DDataGridViewTextBoxColumn, Me.NotesDataGridViewTextBoxColumn, Me.TakeDataGridViewCheckBoxColumn, Me.CorrectDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.BSquiz
-        Me.DataGridView1.Location = New System.Drawing.Point(-109, 54)
+        Me.DataGridView1.Location = New System.Drawing.Point(934, 287)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(872, 97)
+        Me.DataGridView1.Size = New System.Drawing.Size(848, 154)
         Me.DataGridView1.TabIndex = 0
         '
         'IDDataGridViewTextBoxColumn
@@ -181,85 +195,208 @@ Partial Class frmQuiz
         '
         'btnA
         '
-        Me.btnA.Location = New System.Drawing.Point(176, 299)
+        Me.btnA.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnA.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnA.Location = New System.Drawing.Point(334, 301)
         Me.btnA.Name = "btnA"
-        Me.btnA.Size = New System.Drawing.Size(172, 47)
+        Me.btnA.Size = New System.Drawing.Size(201, 47)
         Me.btnA.TabIndex = 2
         Me.btnA.Text = "A"
-        Me.btnA.UseVisualStyleBackColor = True
+        Me.btnA.UseVisualStyleBackColor = False
         '
         'btnB
         '
-        Me.btnB.Location = New System.Drawing.Point(176, 371)
+        Me.btnB.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnB.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnB.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnB.Location = New System.Drawing.Point(334, 373)
         Me.btnB.Name = "btnB"
-        Me.btnB.Size = New System.Drawing.Size(172, 47)
+        Me.btnB.Size = New System.Drawing.Size(201, 47)
         Me.btnB.TabIndex = 2
         Me.btnB.Text = "B"
-        Me.btnB.UseVisualStyleBackColor = True
+        Me.btnB.UseVisualStyleBackColor = False
         '
         'btnC
         '
-        Me.btnC.Location = New System.Drawing.Point(444, 299)
+        Me.btnC.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnC.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnC.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnC.Location = New System.Drawing.Point(647, 301)
         Me.btnC.Name = "btnC"
-        Me.btnC.Size = New System.Drawing.Size(172, 47)
+        Me.btnC.Size = New System.Drawing.Size(201, 47)
         Me.btnC.TabIndex = 2
         Me.btnC.Text = "C"
-        Me.btnC.UseVisualStyleBackColor = True
+        Me.btnC.UseVisualStyleBackColor = False
         '
         'btnD
         '
-        Me.btnD.Location = New System.Drawing.Point(444, 371)
+        Me.btnD.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnD.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnD.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnD.Location = New System.Drawing.Point(647, 373)
         Me.btnD.Name = "btnD"
-        Me.btnD.Size = New System.Drawing.Size(172, 47)
+        Me.btnD.Size = New System.Drawing.Size(201, 47)
         Me.btnD.TabIndex = 2
         Me.btnD.Text = "D"
-        Me.btnD.UseVisualStyleBackColor = True
+        Me.btnD.UseVisualStyleBackColor = False
         '
         'txtQuestion
         '
-        Me.txtQuestion.Location = New System.Drawing.Point(66, 169)
+        Me.txtQuestion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtQuestion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtQuestion.Location = New System.Drawing.Point(234, 66)
         Me.txtQuestion.Multiline = True
         Me.txtQuestion.Name = "txtQuestion"
+        Me.txtQuestion.ReadOnly = True
         Me.txtQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtQuestion.Size = New System.Drawing.Size(671, 124)
+        Me.txtQuestion.Size = New System.Drawing.Size(684, 216)
         Me.txtQuestion.TabIndex = 3
+        Me.txtQuestion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblTitle
         '
-        Me.lblTitle.Location = New System.Drawing.Point(12, 8)
+        Me.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblTitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(412, 9)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(776, 43)
+        Me.lblTitle.Size = New System.Drawing.Size(342, 43)
         Me.lblTitle.TabIndex = 4
         Me.lblTitle.Text = "Label1"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'lifePanel
+        '
+        Me.lifePanel.Controls.Add(Me.heart3)
+        Me.lifePanel.Controls.Add(Me.heart2)
+        Me.lifePanel.Controls.Add(Me.heart1)
+        Me.lifePanel.Location = New System.Drawing.Point(234, 12)
+        Me.lifePanel.Name = "lifePanel"
+        Me.lifePanel.Size = New System.Drawing.Size(153, 48)
+        Me.lifePanel.TabIndex = 5
+        '
+        'heart3
+        '
+        Me.heart3.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
+        Me.heart3.Location = New System.Drawing.Point(101, 6)
+        Me.heart3.Name = "heart3"
+        Me.heart3.Size = New System.Drawing.Size(43, 39)
+        Me.heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart3.TabIndex = 0
+        Me.heart3.TabStop = False
+        '
+        'heart2
+        '
+        Me.heart2.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
+        Me.heart2.Location = New System.Drawing.Point(52, 6)
+        Me.heart2.Name = "heart2"
+        Me.heart2.Size = New System.Drawing.Size(43, 39)
+        Me.heart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart2.TabIndex = 0
+        Me.heart2.TabStop = False
+        '
+        'heart1
+        '
+        Me.heart1.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
+        Me.heart1.Location = New System.Drawing.Point(3, 6)
+        Me.heart1.Name = "heart1"
+        Me.heart1.Size = New System.Drawing.Size(43, 39)
+        Me.heart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart1.TabIndex = 0
+        Me.heart1.TabStop = False
+        '
+        'menuPanel
+        '
+        Me.menuPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.menuPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.menuPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.menuPanel.Controls.Add(Me.Button3)
+        Me.menuPanel.Controls.Add(Me.btnNext)
+        Me.menuPanel.Controls.Add(Me.Button1)
+        Me.menuPanel.Location = New System.Drawing.Point(0, 66)
+        Me.menuPanel.Name = "menuPanel"
+        Me.menuPanel.Size = New System.Drawing.Size(200, 382)
+        Me.menuPanel.TabIndex = 6
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(11, 137)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(171, 47)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "&Back"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'btnNext
+        '
+        Me.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnNext.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNext.Location = New System.Drawing.Point(11, 84)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(171, 47)
+        Me.btnNext.TabIndex = 2
+        Me.btnNext.Text = "&Next"
+        Me.btnNext.UseVisualStyleBackColor = False
+        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(698, 367)
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(11, 31)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(64, 28)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Size = New System.Drawing.Size(171, 47)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "&Retry"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'btnMenu
+        '
+        Me.btnMenu.AutoSize = True
+        Me.btnMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMenu.Location = New System.Drawing.Point(-1, 25)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(63, 42)
+        Me.btnMenu.TabIndex = 7
+        Me.btnMenu.Text = "Menu"
+        Me.btnMenu.UseVisualStyleBackColor = True
         '
         'frmQuiz
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button1)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(933, 450)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.btnMenu)
+        Me.Controls.Add(Me.menuPanel)
+        Me.Controls.Add(Me.lifePanel)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.txtQuestion)
         Me.Controls.Add(Me.btnC)
         Me.Controls.Add(Me.btnD)
         Me.Controls.Add(Me.btnB)
         Me.Controls.Add(Me.btnA)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinimumSize = New System.Drawing.Size(949, 489)
         Me.Name = "frmQuiz"
         Me.Text = "frmQuiz"
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.lifePanel.ResumeLayout(False)
+        CType(Me.heart3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.heart2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.heart1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.menuPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -292,5 +429,13 @@ Partial Class frmQuiz
     Friend WithEvents btnD As Button
     Friend WithEvents txtQuestion As TextBox
     Friend WithEvents lblTitle As Label
+    Friend WithEvents lifePanel As Panel
+    Friend WithEvents heart1 As PictureBox
+    Friend WithEvents heart3 As PictureBox
+    Friend WithEvents heart2 As PictureBox
+    Friend WithEvents menuPanel As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents btnNext As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnMenu As Button
 End Class
