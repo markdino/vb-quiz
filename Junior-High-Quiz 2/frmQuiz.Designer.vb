@@ -59,6 +59,8 @@ Partial Class frmQuiz
         Me.btnNext = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.Button()
+        Me.heart4 = New System.Windows.Forms.PictureBox()
+        Me.heart5 = New System.Windows.Forms.PictureBox()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,6 +69,8 @@ Partial Class frmQuiz
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menuPanel.SuspendLayout()
+        CType(Me.heart4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.heart5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BSquiz
@@ -270,20 +274,22 @@ Partial Class frmQuiz
         '
         'lifePanel
         '
+        Me.lifePanel.Controls.Add(Me.heart5)
+        Me.lifePanel.Controls.Add(Me.heart4)
         Me.lifePanel.Controls.Add(Me.heart3)
         Me.lifePanel.Controls.Add(Me.heart2)
         Me.lifePanel.Controls.Add(Me.heart1)
-        Me.lifePanel.Location = New System.Drawing.Point(234, 12)
+        Me.lifePanel.Location = New System.Drawing.Point(234, 25)
         Me.lifePanel.Name = "lifePanel"
-        Me.lifePanel.Size = New System.Drawing.Size(153, 48)
+        Me.lifePanel.Size = New System.Drawing.Size(172, 40)
         Me.lifePanel.TabIndex = 5
         '
         'heart3
         '
         Me.heart3.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
-        Me.heart3.Location = New System.Drawing.Point(101, 6)
+        Me.heart3.Location = New System.Drawing.Point(71, 5)
         Me.heart3.Name = "heart3"
-        Me.heart3.Size = New System.Drawing.Size(43, 39)
+        Me.heart3.Size = New System.Drawing.Size(30, 30)
         Me.heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.heart3.TabIndex = 0
         Me.heart3.TabStop = False
@@ -291,9 +297,9 @@ Partial Class frmQuiz
         'heart2
         '
         Me.heart2.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
-        Me.heart2.Location = New System.Drawing.Point(52, 6)
+        Me.heart2.Location = New System.Drawing.Point(37, 5)
         Me.heart2.Name = "heart2"
-        Me.heart2.Size = New System.Drawing.Size(43, 39)
+        Me.heart2.Size = New System.Drawing.Size(30, 30)
         Me.heart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.heart2.TabIndex = 0
         Me.heart2.TabStop = False
@@ -301,9 +307,9 @@ Partial Class frmQuiz
         'heart1
         '
         Me.heart1.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
-        Me.heart1.Location = New System.Drawing.Point(3, 6)
+        Me.heart1.Location = New System.Drawing.Point(3, 5)
         Me.heart1.Name = "heart1"
-        Me.heart1.Size = New System.Drawing.Size(43, 39)
+        Me.heart1.Size = New System.Drawing.Size(30, 30)
         Me.heart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.heart1.TabIndex = 0
         Me.heart1.TabStop = False
@@ -369,6 +375,26 @@ Partial Class frmQuiz
         Me.btnMenu.Text = "Menu"
         Me.btnMenu.UseVisualStyleBackColor = True
         '
+        'heart4
+        '
+        Me.heart4.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
+        Me.heart4.Location = New System.Drawing.Point(105, 5)
+        Me.heart4.Name = "heart4"
+        Me.heart4.Size = New System.Drawing.Size(30, 30)
+        Me.heart4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart4.TabIndex = 0
+        Me.heart4.TabStop = False
+        '
+        'heart5
+        '
+        Me.heart5.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
+        Me.heart5.Location = New System.Drawing.Point(139, 4)
+        Me.heart5.Name = "heart5"
+        Me.heart5.Size = New System.Drawing.Size(30, 30)
+        Me.heart5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart5.TabIndex = 0
+        Me.heart5.TabStop = False
+        '
         'frmQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
@@ -397,6 +423,8 @@ Partial Class frmQuiz
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.menuPanel.ResumeLayout(False)
+        CType(Me.heart4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.heart5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -438,4 +466,6 @@ Partial Class frmQuiz
     Friend WithEvents btnNext As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents btnMenu As Button
+    Friend WithEvents heart5 As PictureBox
+    Friend WithEvents heart4 As PictureBox
 End Class
