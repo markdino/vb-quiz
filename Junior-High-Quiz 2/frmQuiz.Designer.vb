@@ -339,7 +339,7 @@ Partial Class frmQuiz
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(171, 47)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "&Back"
+        Me.Button3.Text = "&Quit"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'btnNext
