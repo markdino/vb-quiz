@@ -59,6 +59,10 @@ Partial Class frmQuiz
         Me.btnNext = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.Button()
+        Me.heart4 = New System.Windows.Forms.PictureBox()
+        Me.heart5 = New System.Windows.Forms.PictureBox()
+        Me.lblTopScore = New System.Windows.Forms.Label()
+        Me.lblMyScore = New System.Windows.Forms.Label()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,6 +71,8 @@ Partial Class frmQuiz
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menuPanel.SuspendLayout()
+        CType(Me.heart4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.heart5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BSquiz
@@ -270,20 +276,22 @@ Partial Class frmQuiz
         '
         'lifePanel
         '
+        Me.lifePanel.Controls.Add(Me.heart5)
+        Me.lifePanel.Controls.Add(Me.heart4)
         Me.lifePanel.Controls.Add(Me.heart3)
         Me.lifePanel.Controls.Add(Me.heart2)
         Me.lifePanel.Controls.Add(Me.heart1)
-        Me.lifePanel.Location = New System.Drawing.Point(234, 12)
+        Me.lifePanel.Location = New System.Drawing.Point(234, 25)
         Me.lifePanel.Name = "lifePanel"
-        Me.lifePanel.Size = New System.Drawing.Size(153, 48)
+        Me.lifePanel.Size = New System.Drawing.Size(172, 40)
         Me.lifePanel.TabIndex = 5
         '
         'heart3
         '
         Me.heart3.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
-        Me.heart3.Location = New System.Drawing.Point(101, 6)
+        Me.heart3.Location = New System.Drawing.Point(71, 5)
         Me.heart3.Name = "heart3"
-        Me.heart3.Size = New System.Drawing.Size(43, 39)
+        Me.heart3.Size = New System.Drawing.Size(30, 30)
         Me.heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.heart3.TabIndex = 0
         Me.heart3.TabStop = False
@@ -291,9 +299,9 @@ Partial Class frmQuiz
         'heart2
         '
         Me.heart2.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
-        Me.heart2.Location = New System.Drawing.Point(52, 6)
+        Me.heart2.Location = New System.Drawing.Point(37, 5)
         Me.heart2.Name = "heart2"
-        Me.heart2.Size = New System.Drawing.Size(43, 39)
+        Me.heart2.Size = New System.Drawing.Size(30, 30)
         Me.heart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.heart2.TabIndex = 0
         Me.heart2.TabStop = False
@@ -301,9 +309,9 @@ Partial Class frmQuiz
         'heart1
         '
         Me.heart1.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
-        Me.heart1.Location = New System.Drawing.Point(3, 6)
+        Me.heart1.Location = New System.Drawing.Point(3, 5)
         Me.heart1.Name = "heart1"
-        Me.heart1.Size = New System.Drawing.Size(43, 39)
+        Me.heart1.Size = New System.Drawing.Size(30, 30)
         Me.heart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.heart1.TabIndex = 0
         Me.heart1.TabStop = False
@@ -324,19 +332,19 @@ Partial Class frmQuiz
         '
         'Button3
         '
-        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(11, 137)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(171, 47)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "&Back"
+        Me.Button3.Text = "&Quit"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'btnNext
         '
-        Me.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnNext.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext.Location = New System.Drawing.Point(11, 84)
@@ -348,7 +356,7 @@ Partial Class frmQuiz
         '
         'Button1
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(11, 31)
@@ -369,12 +377,58 @@ Partial Class frmQuiz
         Me.btnMenu.Text = "Menu"
         Me.btnMenu.UseVisualStyleBackColor = True
         '
+        'heart4
+        '
+        Me.heart4.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
+        Me.heart4.Location = New System.Drawing.Point(105, 5)
+        Me.heart4.Name = "heart4"
+        Me.heart4.Size = New System.Drawing.Size(30, 30)
+        Me.heart4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart4.TabIndex = 0
+        Me.heart4.TabStop = False
+        '
+        'heart5
+        '
+        Me.heart5.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
+        Me.heart5.Location = New System.Drawing.Point(139, 4)
+        Me.heart5.Name = "heart5"
+        Me.heart5.Size = New System.Drawing.Size(30, 30)
+        Me.heart5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart5.TabIndex = 0
+        Me.heart5.TabStop = False
+        '
+        'lblTopScore
+        '
+        Me.lblTopScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTopScore.AutoSize = True
+        Me.lblTopScore.ForeColor = System.Drawing.Color.Maroon
+        Me.lblTopScore.Location = New System.Drawing.Point(848, 9)
+        Me.lblTopScore.Name = "lblTopScore"
+        Me.lblTopScore.Size = New System.Drawing.Size(70, 13)
+        Me.lblTopScore.TabIndex = 8
+        Me.lblTopScore.Text = "Top Score:"
+        Me.lblTopScore.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'lblMyScore
+        '
+        Me.lblMyScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblMyScore.AutoSize = True
+        Me.lblMyScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMyScore.Location = New System.Drawing.Point(833, 29)
+        Me.lblMyScore.Name = "lblMyScore"
+        Me.lblMyScore.Size = New System.Drawing.Size(88, 20)
+        Me.lblMyScore.TabIndex = 8
+        Me.lblMyScore.Text = "My Score:"
+        Me.lblMyScore.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'frmQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(933, 450)
+        Me.Controls.Add(Me.lblMyScore)
+        Me.Controls.Add(Me.lblTopScore)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnMenu)
         Me.Controls.Add(Me.menuPanel)
@@ -397,6 +451,8 @@ Partial Class frmQuiz
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.menuPanel.ResumeLayout(False)
+        CType(Me.heart4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.heart5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -438,4 +494,8 @@ Partial Class frmQuiz
     Friend WithEvents btnNext As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents btnMenu As Button
+    Friend WithEvents heart5 As PictureBox
+    Friend WithEvents heart4 As PictureBox
+    Friend WithEvents lblTopScore As Label
+    Friend WithEvents lblMyScore As Label
 End Class

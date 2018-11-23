@@ -1,6 +1,8 @@
 ﻿Public Class frmQuiz
     Dim correctAns, notes As String
-    Dim globalIndex As Integer
+    Dim globalIndex, topScore As Integer
+    Dim userLife As Integer = 5
+    Dim userScore As Integer = 0
 
     Private Sub frmQuiz_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'QuizDataSet.Values' table. You can move, or remove it, as needed.
