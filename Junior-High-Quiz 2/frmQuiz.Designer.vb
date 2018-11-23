@@ -61,6 +61,8 @@ Partial Class frmQuiz
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.heart4 = New System.Windows.Forms.PictureBox()
         Me.heart5 = New System.Windows.Forms.PictureBox()
+        Me.lblTopScore = New System.Windows.Forms.Label()
+        Me.lblMyScore = New System.Windows.Forms.Label()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -395,12 +397,38 @@ Partial Class frmQuiz
         Me.heart5.TabIndex = 0
         Me.heart5.TabStop = False
         '
+        'lblTopScore
+        '
+        Me.lblTopScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTopScore.AutoSize = True
+        Me.lblTopScore.ForeColor = System.Drawing.Color.Maroon
+        Me.lblTopScore.Location = New System.Drawing.Point(848, 9)
+        Me.lblTopScore.Name = "lblTopScore"
+        Me.lblTopScore.Size = New System.Drawing.Size(70, 13)
+        Me.lblTopScore.TabIndex = 8
+        Me.lblTopScore.Text = "Top Score:"
+        Me.lblTopScore.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'lblMyScore
+        '
+        Me.lblMyScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblMyScore.AutoSize = True
+        Me.lblMyScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMyScore.Location = New System.Drawing.Point(833, 29)
+        Me.lblMyScore.Name = "lblMyScore"
+        Me.lblMyScore.Size = New System.Drawing.Size(88, 20)
+        Me.lblMyScore.TabIndex = 8
+        Me.lblMyScore.Text = "My Score:"
+        Me.lblMyScore.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'frmQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(933, 450)
+        Me.Controls.Add(Me.lblMyScore)
+        Me.Controls.Add(Me.lblTopScore)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnMenu)
         Me.Controls.Add(Me.menuPanel)
@@ -468,4 +496,6 @@ Partial Class frmQuiz
     Friend WithEvents btnMenu As Button
     Friend WithEvents heart5 As PictureBox
     Friend WithEvents heart4 As PictureBox
+    Friend WithEvents lblTopScore As Label
+    Friend WithEvents lblMyScore As Label
 End Class

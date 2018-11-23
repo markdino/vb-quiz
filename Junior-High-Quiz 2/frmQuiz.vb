@@ -1,6 +1,6 @@
 ﻿Public Class frmQuiz
     Dim correctAns, notes As String
-    Dim globalIndex As Integer
+    Dim globalIndex, topScore As Integer
     Dim userLife As Integer = 5
     Dim userScore As Integer = 0
 
