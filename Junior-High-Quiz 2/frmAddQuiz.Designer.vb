@@ -132,7 +132,6 @@ Partial Class frmAddQuiz
         Me.DataGridView1.Location = New System.Drawing.Point(18, 50)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(745, 243)
         Me.DataGridView1.TabIndex = 1
         '
@@ -141,63 +140,54 @@ Partial Class frmAddQuiz
         Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
         Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
         Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
         '
         'QuizDataGridViewTextBoxColumn
         '
         Me.QuizDataGridViewTextBoxColumn.DataPropertyName = "Quiz"
         Me.QuizDataGridViewTextBoxColumn.HeaderText = "Quiz"
         Me.QuizDataGridViewTextBoxColumn.Name = "QuizDataGridViewTextBoxColumn"
-        Me.QuizDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ADataGridViewTextBoxColumn
         '
         Me.ADataGridViewTextBoxColumn.DataPropertyName = "A"
         Me.ADataGridViewTextBoxColumn.HeaderText = "A"
         Me.ADataGridViewTextBoxColumn.Name = "ADataGridViewTextBoxColumn"
-        Me.ADataGridViewTextBoxColumn.ReadOnly = True
         '
         'BDataGridViewTextBoxColumn
         '
         Me.BDataGridViewTextBoxColumn.DataPropertyName = "B"
         Me.BDataGridViewTextBoxColumn.HeaderText = "B"
         Me.BDataGridViewTextBoxColumn.Name = "BDataGridViewTextBoxColumn"
-        Me.BDataGridViewTextBoxColumn.ReadOnly = True
         '
         'CDataGridViewTextBoxColumn
         '
         Me.CDataGridViewTextBoxColumn.DataPropertyName = "C"
         Me.CDataGridViewTextBoxColumn.HeaderText = "C"
         Me.CDataGridViewTextBoxColumn.Name = "CDataGridViewTextBoxColumn"
-        Me.CDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DDataGridViewTextBoxColumn
         '
         Me.DDataGridViewTextBoxColumn.DataPropertyName = "D"
         Me.DDataGridViewTextBoxColumn.HeaderText = "D"
         Me.DDataGridViewTextBoxColumn.Name = "DDataGridViewTextBoxColumn"
-        Me.DDataGridViewTextBoxColumn.ReadOnly = True
         '
         'NotesDataGridViewTextBoxColumn
         '
         Me.NotesDataGridViewTextBoxColumn.DataPropertyName = "Notes"
         Me.NotesDataGridViewTextBoxColumn.HeaderText = "Notes"
         Me.NotesDataGridViewTextBoxColumn.Name = "NotesDataGridViewTextBoxColumn"
-        Me.NotesDataGridViewTextBoxColumn.ReadOnly = True
         '
         'TakeDataGridViewCheckBoxColumn
         '
         Me.TakeDataGridViewCheckBoxColumn.DataPropertyName = "take"
         Me.TakeDataGridViewCheckBoxColumn.HeaderText = "take"
         Me.TakeDataGridViewCheckBoxColumn.Name = "TakeDataGridViewCheckBoxColumn"
-        Me.TakeDataGridViewCheckBoxColumn.ReadOnly = True
         '
         'CorrectDataGridViewTextBoxColumn
         '
         Me.CorrectDataGridViewTextBoxColumn.DataPropertyName = "Correct"
         Me.CorrectDataGridViewTextBoxColumn.HeaderText = "Correct"
         Me.CorrectDataGridViewTextBoxColumn.Name = "CorrectDataGridViewTextBoxColumn"
-        Me.CorrectDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Label1
         '
