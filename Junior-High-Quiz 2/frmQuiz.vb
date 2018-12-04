@@ -217,6 +217,28 @@
         End If
 
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Reset_Quiz()
+    End Sub
+
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnMax_Click(sender As Object, e As EventArgs) Handles btnMax.Click
+        If WindowState = FormWindowState.Normal Then
+            WindowState = FormWindowState.Maximized
+        Else
+            WindowState = FormWindowState.Normal
+        End If
+
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Reset_Quiz()
+    End Sub
+
     Private Sub btnResponsive()
         'Dim col6 As Integer = txtQuestion.Width / 6
         'Dim btnWidth As Integer = col6 * 2 - 10
@@ -242,5 +264,10 @@
 
     End Sub
 
-
+    Private Sub ControlBOx_Enter(sender As Object, e As EventArgs) Handles btnClose.MouseEnter, btnMax.MouseEnter, btnMin.MouseEnter
+        sender.ForeColor = Color.White
+    End Sub
+    Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
+        sender.ForeColor = Color.Black
+    End Sub
 End Class

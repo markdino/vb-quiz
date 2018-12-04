@@ -64,6 +64,9 @@ Partial Class frmQuiz
         Me.lblTopScore = New System.Windows.Forms.Label()
         Me.lblMyScore = New System.Windows.Forms.Label()
         Me.PanelButton = New System.Windows.Forms.Panel()
+        Me.btnClose = New System.Windows.Forms.Label()
+        Me.btnMax = New System.Windows.Forms.Label()
+        Me.btnMin = New System.Windows.Forms.Label()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -435,12 +438,56 @@ Partial Class frmQuiz
         Me.PanelButton.Size = New System.Drawing.Size(681, 140)
         Me.PanelButton.TabIndex = 9
         '
+        'btnClose
+        '
+        Me.btnClose.AutoSize = True
+        Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.ForeColor = System.Drawing.Color.White
+        Me.btnClose.Location = New System.Drawing.Point(3, 3)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnClose.Size = New System.Drawing.Size(17, 17)
+        Me.btnClose.TabIndex = 10
+        Me.btnClose.Text = "x"
+        '
+        'btnMax
+        '
+        Me.btnMax.AutoSize = True
+        Me.btnMax.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnMax.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMax.ForeColor = System.Drawing.Color.White
+        Me.btnMax.Location = New System.Drawing.Point(22, 3)
+        Me.btnMax.Name = "btnMax"
+        Me.btnMax.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnMax.Size = New System.Drawing.Size(18, 17)
+        Me.btnMax.TabIndex = 10
+        Me.btnMax.Text = "+"
+        '
+        'btnMin
+        '
+        Me.btnMin.AutoSize = True
+        Me.btnMin.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMin.Font = New System.Drawing.Font("Bauhaus 93", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMin.ForeColor = System.Drawing.Color.White
+        Me.btnMin.Location = New System.Drawing.Point(42, 3)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.btnMin.Size = New System.Drawing.Size(18, 17)
+        Me.btnMin.TabIndex = 10
+        Me.btnMin.Text = "-"
+        '
         'frmQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(933, 450)
+        Me.ClientSize = New System.Drawing.Size(933, 473)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnMin)
+        Me.Controls.Add(Me.btnMax)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.PanelButton)
         Me.Controls.Add(Me.lblMyScore)
         Me.Controls.Add(Me.lblTopScore)
@@ -453,7 +500,7 @@ Partial Class frmQuiz
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MinimumSize = New System.Drawing.Size(949, 489)
         Me.Name = "frmQuiz"
-        Me.Text = "frmQuiz"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -511,4 +558,7 @@ Partial Class frmQuiz
     Friend WithEvents lblTopScore As Label
     Friend WithEvents lblMyScore As Label
     Friend WithEvents PanelButton As Panel
+    Friend WithEvents btnClose As Label
+    Friend WithEvents btnMax As Label
+    Friend WithEvents btnMin As Label
 End Class
