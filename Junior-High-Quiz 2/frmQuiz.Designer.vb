@@ -63,6 +63,7 @@ Partial Class frmQuiz
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.lblTopScore = New System.Windows.Forms.Label()
         Me.lblMyScore = New System.Windows.Forms.Label()
+        Me.PanelButton = New System.Windows.Forms.Panel()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +74,7 @@ Partial Class frmQuiz
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menuPanel.SuspendLayout()
+        Me.PanelButton.SuspendLayout()
         Me.SuspendLayout()
         '
         'BSquiz
@@ -204,9 +206,9 @@ Partial Class frmQuiz
         Me.btnA.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnA.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnA.Location = New System.Drawing.Point(334, 301)
+        Me.btnA.Location = New System.Drawing.Point(13, 8)
         Me.btnA.Name = "btnA"
-        Me.btnA.Size = New System.Drawing.Size(201, 47)
+        Me.btnA.Size = New System.Drawing.Size(321, 47)
         Me.btnA.TabIndex = 2
         Me.btnA.Text = "A"
         Me.btnA.UseVisualStyleBackColor = False
@@ -216,9 +218,9 @@ Partial Class frmQuiz
         Me.btnB.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnB.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnB.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnB.Location = New System.Drawing.Point(334, 373)
+        Me.btnB.Location = New System.Drawing.Point(13, 80)
         Me.btnB.Name = "btnB"
-        Me.btnB.Size = New System.Drawing.Size(201, 47)
+        Me.btnB.Size = New System.Drawing.Size(321, 47)
         Me.btnB.TabIndex = 2
         Me.btnB.Text = "B"
         Me.btnB.UseVisualStyleBackColor = False
@@ -228,9 +230,9 @@ Partial Class frmQuiz
         Me.btnC.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnC.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnC.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnC.Location = New System.Drawing.Point(647, 301)
+        Me.btnC.Location = New System.Drawing.Point(346, 8)
         Me.btnC.Name = "btnC"
-        Me.btnC.Size = New System.Drawing.Size(201, 47)
+        Me.btnC.Size = New System.Drawing.Size(321, 47)
         Me.btnC.TabIndex = 2
         Me.btnC.Text = "C"
         Me.btnC.UseVisualStyleBackColor = False
@@ -240,9 +242,9 @@ Partial Class frmQuiz
         Me.btnD.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnD.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnD.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnD.Location = New System.Drawing.Point(647, 373)
+        Me.btnD.Location = New System.Drawing.Point(346, 80)
         Me.btnD.Name = "btnD"
-        Me.btnD.Size = New System.Drawing.Size(201, 47)
+        Me.btnD.Size = New System.Drawing.Size(321, 47)
         Me.btnD.TabIndex = 2
         Me.btnD.Text = "D"
         Me.btnD.UseVisualStyleBackColor = False
@@ -421,12 +423,25 @@ Partial Class frmQuiz
         Me.lblMyScore.Text = "My Score:"
         Me.lblMyScore.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'PanelButton
+        '
+        Me.PanelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.PanelButton.Controls.Add(Me.btnC)
+        Me.PanelButton.Controls.Add(Me.btnD)
+        Me.PanelButton.Controls.Add(Me.btnB)
+        Me.PanelButton.Controls.Add(Me.btnA)
+        Me.PanelButton.Location = New System.Drawing.Point(237, 291)
+        Me.PanelButton.Name = "PanelButton"
+        Me.PanelButton.Size = New System.Drawing.Size(681, 140)
+        Me.PanelButton.TabIndex = 9
+        '
         'frmQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(933, 450)
+        Me.Controls.Add(Me.PanelButton)
         Me.Controls.Add(Me.lblMyScore)
         Me.Controls.Add(Me.lblTopScore)
         Me.Controls.Add(Me.DataGridView1)
@@ -435,10 +450,6 @@ Partial Class frmQuiz
         Me.Controls.Add(Me.lifePanel)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.txtQuestion)
-        Me.Controls.Add(Me.btnC)
-        Me.Controls.Add(Me.btnD)
-        Me.Controls.Add(Me.btnB)
-        Me.Controls.Add(Me.btnA)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MinimumSize = New System.Drawing.Size(949, 489)
         Me.Name = "frmQuiz"
@@ -453,6 +464,7 @@ Partial Class frmQuiz
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.menuPanel.ResumeLayout(False)
+        Me.PanelButton.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -498,4 +510,5 @@ Partial Class frmQuiz
     Friend WithEvents heart4 As PictureBox
     Friend WithEvents lblTopScore As Label
     Friend WithEvents lblMyScore As Label
+    Friend WithEvents PanelButton As Panel
 End Class

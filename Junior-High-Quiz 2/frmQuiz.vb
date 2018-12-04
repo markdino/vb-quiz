@@ -200,6 +200,10 @@
     Private Sub Update_State()
         lblTopScore.Text = "Top Score: " & topscore
         lblMyScore.Text = Form1.lblUser.Text & ": " & userScore
+
+        lblTopScore.Left = (txtQuestion.Left + txtQuestion.Width) - lblTopScore.Width
+        lblMyScore.Left = (txtQuestion.Left + txtQuestion.Width) - lblMyScore.Width
+
         If userLife < 1 Then
             heart1.Visible = False
         ElseIf userLife < 2 Then
@@ -214,25 +218,28 @@
 
     End Sub
     Private Sub btnResponsive()
-        Dim col6 As Integer = txtQuestion.Width / 6
-        Dim btnWidth As Integer = col6 * 2 - 10
-        Dim spanLeft As Integer = txtQuestion.Left
-        btnA.Left = col6 + spanLeft
-        btnB.Left = btnA.Left
-        btnC.Left = col6 * 3 + 10 + spanLeft
-        btnD.Left = col6 * 3 + 10 + spanLeft
+        'Dim col6 As Integer = txtQuestion.Width / 6
+        'Dim btnWidth As Integer = col6 * 2 - 10
+        'Dim spanLeft As Integer = txtQuestion.Left
+        'btnA.Left = col6 + spanLeft
+        'btnB.Left = btnA.Left
+        'btnC.Left = col6 * 3 + 10 + spanLeft
+        'btnD.Left = col6 * 3 + 10 + spanLeft
 
-        btnA.Width = btnWidth
-        btnB.Width = btnA.Width
-        btnC.Width = btnWidth
-        btnD.Width = btnWidth
+        'btnA.Width = btnWidth
+        'btnB.Width = btnA.Width
+        'btnC.Width = btnWidth
+        'btnD.Width = btnWidth
 
-        btnB.Top = btnD.Top
+        'btnB.Top = btnD.Top
 
-        lblTitle.Width = col6 * 2
-        lblTitle.Left = col6 * 2 + spanLeft
+        'lblTitle.Width = col6 * 2
+        'lblTitle.Left = col6 * 2 + spanLeft
 
-        lifePanel.Left = spanLeft
+        'lifePanel.Left = spanLeft
+        PanelButton.Left = ((txtQuestion.Width - PanelButton.Width) / 2) + txtQuestion.Left
+        PanelButton.Top = (Height - PanelButton.Height) - 40
+
     End Sub
 
 
