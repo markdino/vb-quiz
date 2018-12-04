@@ -30,6 +30,7 @@
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         BSquiz.AddNew()
         txtID.Text = DataGridView1.Rows(DataGridView1.RowCount - 2).Cells(0).Value + 1
+        txtQ.Focus()
     End Sub
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Validate()
