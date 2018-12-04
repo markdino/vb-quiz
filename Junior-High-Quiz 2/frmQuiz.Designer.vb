@@ -51,6 +51,8 @@ Partial Class frmQuiz
         Me.txtQuestion = New System.Windows.Forms.TextBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lifePanel = New System.Windows.Forms.Panel()
+        Me.heart5 = New System.Windows.Forms.PictureBox()
+        Me.heart4 = New System.Windows.Forms.PictureBox()
         Me.heart3 = New System.Windows.Forms.PictureBox()
         Me.heart2 = New System.Windows.Forms.PictureBox()
         Me.heart1 = New System.Windows.Forms.PictureBox()
@@ -59,20 +61,18 @@ Partial Class frmQuiz
         Me.btnNext = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.Button()
-        Me.heart4 = New System.Windows.Forms.PictureBox()
-        Me.heart5 = New System.Windows.Forms.PictureBox()
         Me.lblTopScore = New System.Windows.Forms.Label()
         Me.lblMyScore = New System.Windows.Forms.Label()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.lifePanel.SuspendLayout()
+        CType(Me.heart5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.heart4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menuPanel.SuspendLayout()
-        CType(Me.heart4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.heart5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BSquiz
@@ -286,6 +286,26 @@ Partial Class frmQuiz
         Me.lifePanel.Size = New System.Drawing.Size(172, 40)
         Me.lifePanel.TabIndex = 5
         '
+        'heart5
+        '
+        Me.heart5.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
+        Me.heart5.Location = New System.Drawing.Point(139, 4)
+        Me.heart5.Name = "heart5"
+        Me.heart5.Size = New System.Drawing.Size(30, 30)
+        Me.heart5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart5.TabIndex = 0
+        Me.heart5.TabStop = False
+        '
+        'heart4
+        '
+        Me.heart4.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
+        Me.heart4.Location = New System.Drawing.Point(105, 5)
+        Me.heart4.Name = "heart4"
+        Me.heart4.Size = New System.Drawing.Size(30, 30)
+        Me.heart4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart4.TabIndex = 0
+        Me.heart4.TabStop = False
+        '
         'heart3
         '
         Me.heart3.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
@@ -377,26 +397,6 @@ Partial Class frmQuiz
         Me.btnMenu.Text = "Menu"
         Me.btnMenu.UseVisualStyleBackColor = True
         '
-        'heart4
-        '
-        Me.heart4.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
-        Me.heart4.Location = New System.Drawing.Point(105, 5)
-        Me.heart4.Name = "heart4"
-        Me.heart4.Size = New System.Drawing.Size(30, 30)
-        Me.heart4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.heart4.TabIndex = 0
-        Me.heart4.TabStop = False
-        '
-        'heart5
-        '
-        Me.heart5.Image = Global.Junior_High_Quiz_2.My.Resources.Resources.heart
-        Me.heart5.Location = New System.Drawing.Point(139, 4)
-        Me.heart5.Name = "heart5"
-        Me.heart5.Size = New System.Drawing.Size(30, 30)
-        Me.heart5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.heart5.TabIndex = 0
-        Me.heart5.TabStop = False
-        '
         'lblTopScore
         '
         Me.lblTopScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -447,12 +447,12 @@ Partial Class frmQuiz
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.lifePanel.ResumeLayout(False)
+        CType(Me.heart5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.heart4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.menuPanel.ResumeLayout(False)
-        CType(Me.heart4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.heart5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
