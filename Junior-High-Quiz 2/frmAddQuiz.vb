@@ -36,9 +36,14 @@
         Validate()
         BSquiz.EndEdit()
         UpdateData()
+        MsgBox("Successfuly saved and updated!", MsgBoxStyle.Information, "Saved")
     End Sub
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        BSquiz.RemoveCurrent()
+        If MsgBox("Are you sure you want to delete this item", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, "warning") = MsgBoxResult.Yes Then
+            BSquiz.RemoveCurrent()
+            MsgBox("item deleted", MsgBoxStyle.Information, "Deleted")
+        End If
+
     End Sub
 
     Private Sub UpdateData()
