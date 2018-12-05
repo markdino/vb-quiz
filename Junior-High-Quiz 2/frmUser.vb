@@ -91,4 +91,12 @@
         sender.ForeColor = Color.Black
         sender.BorderStyle = BorderStyle.None
     End Sub
+
+    Private Sub cboUser_KeyDown(sender As Object, e As KeyEventArgs) Handles cboUser.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If Not cboUser.Text = "Select User Here . . ." Then
+                btnLogin_Click(sender, e)
+            End If
+        End If
+    End Sub
 End Class
