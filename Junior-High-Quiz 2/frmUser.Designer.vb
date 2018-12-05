@@ -26,6 +26,9 @@ Partial Class frmUser
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.cboUser = New System.Windows.Forms.ComboBox()
+        Me.btnMin = New System.Windows.Forms.Label()
+        Me.btnMax = New System.Windows.Forms.Label()
+        Me.btnClose = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -74,12 +77,58 @@ Partial Class frmUser
         Me.cboUser.TabIndex = 0
         Me.cboUser.Text = "Select User Here . . ."
         '
+        'btnMin
+        '
+        Me.btnMin.AutoSize = True
+        Me.btnMin.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMin.Font = New System.Drawing.Font("Bauhaus 93", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMin.ForeColor = System.Drawing.Color.Black
+        Me.btnMin.Location = New System.Drawing.Point(41, 2)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.btnMin.Size = New System.Drawing.Size(18, 17)
+        Me.btnMin.TabIndex = 14
+        Me.btnMin.Text = "-"
+        '
+        'btnMax
+        '
+        Me.btnMax.AutoSize = True
+        Me.btnMax.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnMax.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMax.Enabled = False
+        Me.btnMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMax.ForeColor = System.Drawing.Color.Black
+        Me.btnMax.Location = New System.Drawing.Point(21, 2)
+        Me.btnMax.Name = "btnMax"
+        Me.btnMax.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnMax.Size = New System.Drawing.Size(18, 17)
+        Me.btnMax.TabIndex = 15
+        Me.btnMax.Text = "+"
+        '
+        'btnClose
+        '
+        Me.btnClose.AutoSize = True
+        Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.ForeColor = System.Drawing.Color.Black
+        Me.btnClose.Location = New System.Drawing.Point(2, 2)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnClose.Size = New System.Drawing.Size(17, 17)
+        Me.btnClose.TabIndex = 16
+        Me.btnClose.Text = "x"
+        '
         'frmUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(468, 308)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnMin)
+        Me.Controls.Add(Me.btnMax)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Panel1)
         Me.MaximumSize = New System.Drawing.Size(484, 347)
         Me.MinimumSize = New System.Drawing.Size(484, 347)
@@ -89,6 +138,7 @@ Partial Class frmUser
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -96,4 +146,7 @@ Partial Class frmUser
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents cboUser As ComboBox
+    Friend WithEvents btnMin As Label
+    Friend WithEvents btnMax As Label
+    Friend WithEvents btnClose As Label
 End Class
