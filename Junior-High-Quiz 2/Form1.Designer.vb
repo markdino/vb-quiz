@@ -57,6 +57,9 @@ Partial Class Form1
         Me.ValuesTableAdapter = New Junior_High_Quiz_2.quizDataSetTableAdapters.ValuesTableAdapter()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.lblLogout = New System.Windows.Forms.Label()
+        Me.btnMin = New System.Windows.Forms.Label()
+        Me.btnMax = New System.Windows.Forms.Label()
+        Me.btnClose = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -337,6 +340,48 @@ Partial Class Form1
         Me.lblLogout.TabIndex = 3
         Me.lblLogout.Text = "Logout"
         '
+        'btnMin
+        '
+        Me.btnMin.AutoSize = True
+        Me.btnMin.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMin.Font = New System.Drawing.Font("Bauhaus 93", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMin.ForeColor = System.Drawing.Color.Black
+        Me.btnMin.Location = New System.Drawing.Point(41, 2)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.btnMin.Size = New System.Drawing.Size(18, 17)
+        Me.btnMin.TabIndex = 11
+        Me.btnMin.Text = "-"
+        '
+        'btnMax
+        '
+        Me.btnMax.AutoSize = True
+        Me.btnMax.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnMax.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMax.ForeColor = System.Drawing.Color.Black
+        Me.btnMax.Location = New System.Drawing.Point(21, 2)
+        Me.btnMax.Name = "btnMax"
+        Me.btnMax.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnMax.Size = New System.Drawing.Size(18, 17)
+        Me.btnMax.TabIndex = 12
+        Me.btnMax.Text = "+"
+        '
+        'btnClose
+        '
+        Me.btnClose.AutoSize = True
+        Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.ForeColor = System.Drawing.Color.Black
+        Me.btnClose.Location = New System.Drawing.Point(2, 2)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnClose.Size = New System.Drawing.Size(17, 17)
+        Me.btnClose.TabIndex = 13
+        Me.btnClose.Text = "x"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -344,6 +389,9 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 557)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnMin)
+        Me.Controls.Add(Me.btnMax)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.lblLogout)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.mainPanel)
@@ -396,4 +444,7 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents lblUser As Label
     Friend WithEvents lblLogout As Label
+    Friend WithEvents btnMin As Label
+    Friend WithEvents btnMax As Label
+    Friend WithEvents btnClose As Label
 End Class
