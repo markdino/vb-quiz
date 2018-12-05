@@ -443,7 +443,7 @@ Partial Class frmQuiz
         Me.btnClose.AutoSize = True
         Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnClose.ForeColor = System.Drawing.Color.White
+        Me.btnClose.ForeColor = System.Drawing.Color.Black
         Me.btnClose.Location = New System.Drawing.Point(3, 3)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Padding = New System.Windows.Forms.Padding(2)
@@ -456,7 +456,7 @@ Partial Class frmQuiz
         Me.btnMax.AutoSize = True
         Me.btnMax.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnMax.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMax.ForeColor = System.Drawing.Color.White
+        Me.btnMax.ForeColor = System.Drawing.Color.Black
         Me.btnMax.Location = New System.Drawing.Point(22, 3)
         Me.btnMax.Name = "btnMax"
         Me.btnMax.Padding = New System.Windows.Forms.Padding(2)
@@ -470,7 +470,7 @@ Partial Class frmQuiz
         Me.btnMin.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMin.Font = New System.Drawing.Font("Bauhaus 93", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMin.ForeColor = System.Drawing.Color.White
+        Me.btnMin.ForeColor = System.Drawing.Color.Black
         Me.btnMin.Location = New System.Drawing.Point(42, 3)
         Me.btnMin.Name = "btnMin"
         Me.btnMin.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)

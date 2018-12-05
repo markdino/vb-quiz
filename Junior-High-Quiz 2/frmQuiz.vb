@@ -222,22 +222,6 @@
         Reset_Quiz()
     End Sub
 
-    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
-        WindowState = FormWindowState.Minimized
-    End Sub
-
-    Private Sub btnMax_Click(sender As Object, e As EventArgs) Handles btnMax.Click
-        If WindowState = FormWindowState.Normal Then
-            WindowState = FormWindowState.Maximized
-        Else
-            WindowState = FormWindowState.Normal
-        End If
-
-    End Sub
-
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Reset_Quiz()
-    End Sub
 
     Private Sub btnResponsive()
         'Dim col6 As Integer = txtQuestion.Width / 6
@@ -263,11 +247,28 @@
         PanelButton.Top = (Height - PanelButton.Height) - 40
 
     End Sub
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Reset_Quiz()
+    End Sub
 
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnMax_Click(sender As Object, e As EventArgs) Handles btnMax.Click
+        If WindowState = FormWindowState.Normal Then
+            WindowState = FormWindowState.Maximized
+        Else
+            WindowState = FormWindowState.Normal
+        End If
+
+    End Sub
     Private Sub ControlBOx_Enter(sender As Object, e As EventArgs) Handles btnClose.MouseEnter, btnMax.MouseEnter, btnMin.MouseEnter
         sender.ForeColor = Color.White
+        sender.BorderStyle = BorderStyle.Fixed3D
     End Sub
     Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
         sender.ForeColor = Color.Black
+        sender.BorderStyle = BorderStyle.None
     End Sub
 End Class

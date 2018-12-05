@@ -64,6 +64,9 @@ Partial Class frmAddQuiz
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.cboSubj = New System.Windows.Forms.ComboBox()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnMin = New System.Windows.Forms.Label()
+        Me.btnMax = New System.Windows.Forms.Label()
+        Me.btnClose = New System.Windows.Forms.Label()
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -375,10 +378,11 @@ Partial Class frmAddQuiz
         '
         'cboSubj
         '
+        Me.cboSubj.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboSubj.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboSubj.FormattingEnabled = True
         Me.cboSubj.Items.AddRange(New Object() {"AP", "Computer", "Math", "English", "Filipino", "Mapeh", "Science", "TLE", "Values"})
-        Me.cboSubj.Location = New System.Drawing.Point(18, 14)
+        Me.cboSubj.Location = New System.Drawing.Point(510, 14)
         Me.cboSubj.Name = "cboSubj"
         Me.cboSubj.Size = New System.Drawing.Size(253, 28)
         Me.cboSubj.TabIndex = 0
@@ -396,12 +400,58 @@ Partial Class frmAddQuiz
         Me.btnExit.Text = "&Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
+        'btnMin
+        '
+        Me.btnMin.AutoSize = True
+        Me.btnMin.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMin.Font = New System.Drawing.Font("Bauhaus 93", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMin.ForeColor = System.Drawing.Color.Black
+        Me.btnMin.Location = New System.Drawing.Point(41, 2)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.btnMin.Size = New System.Drawing.Size(18, 17)
+        Me.btnMin.TabIndex = 15
+        Me.btnMin.Text = "-"
+        '
+        'btnMax
+        '
+        Me.btnMax.AutoSize = True
+        Me.btnMax.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnMax.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMax.ForeColor = System.Drawing.Color.Black
+        Me.btnMax.Location = New System.Drawing.Point(21, 2)
+        Me.btnMax.Name = "btnMax"
+        Me.btnMax.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnMax.Size = New System.Drawing.Size(18, 17)
+        Me.btnMax.TabIndex = 16
+        Me.btnMax.Text = "+"
+        '
+        'btnClose
+        '
+        Me.btnClose.AutoSize = True
+        Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.ForeColor = System.Drawing.Color.Black
+        Me.btnClose.Location = New System.Drawing.Point(2, 2)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnClose.Size = New System.Drawing.Size(17, 17)
+        Me.btnClose.TabIndex = 17
+        Me.btnClose.Text = "x"
+        '
         'frmAddQuiz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Pink
-        Me.ClientSize = New System.Drawing.Size(786, 626)
+        Me.ClientSize = New System.Drawing.Size(786, 649)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnMin)
+        Me.Controls.Add(Me.btnMax)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.cboSubj)
         Me.Controls.Add(Me.btnDelete)
@@ -427,7 +477,7 @@ Partial Class frmAddQuiz
         Me.MinimumSize = New System.Drawing.Size(802, 665)
         Me.Name = "frmAddQuiz"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Add Quiz"
+        Me.Text = "Quiz Manager"
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -478,4 +528,7 @@ Partial Class frmAddQuiz
     Friend WithEvents btnDelete As Button
     Friend WithEvents cboSubj As ComboBox
     Friend WithEvents btnExit As Button
+    Friend WithEvents btnMin As Label
+    Friend WithEvents btnMax As Label
+    Friend WithEvents btnClose As Label
 End Class
