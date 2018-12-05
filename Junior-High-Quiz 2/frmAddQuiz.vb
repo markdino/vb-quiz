@@ -117,4 +117,27 @@
     Private Sub txtID_TextChanged(sender As Object, e As EventArgs) Handles txtID.TextChanged
         restrictRow1()
     End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        btnExit_Click(sender, e)
+    End Sub
+
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnMax_Click(sender As Object, e As EventArgs) Handles btnMax.Click
+        If WindowState = FormWindowState.Normal Then
+            WindowState = FormWindowState.Maximized
+        Else
+            WindowState = FormWindowState.Normal
+        End If
+
+    End Sub
+    Private Sub ControlBOx_Enter(sender As Object, e As EventArgs) Handles btnClose.MouseEnter, btnMax.MouseEnter, btnMin.MouseEnter
+        sender.ForeColor = Color.White
+    End Sub
+    Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
+        sender.ForeColor = Color.Black
+    End Sub
 End Class
