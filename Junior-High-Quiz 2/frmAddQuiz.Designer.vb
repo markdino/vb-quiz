@@ -447,7 +447,7 @@ Partial Class frmAddQuiz
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Pink
-        Me.ClientSize = New System.Drawing.Size(786, 626)
+        Me.ClientSize = New System.Drawing.Size(786, 649)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnMin)
         Me.Controls.Add(Me.btnMax)

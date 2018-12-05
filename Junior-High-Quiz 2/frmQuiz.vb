@@ -265,8 +265,10 @@
     End Sub
     Private Sub ControlBOx_Enter(sender As Object, e As EventArgs) Handles btnClose.MouseEnter, btnMax.MouseEnter, btnMin.MouseEnter
         sender.ForeColor = Color.White
+        sender.BorderStyle = BorderStyle.Fixed3D
     End Sub
     Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
         sender.ForeColor = Color.Black
+        sender.BorderStyle = BorderStyle.None
     End Sub
 End Class
