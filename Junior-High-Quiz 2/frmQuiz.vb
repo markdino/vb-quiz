@@ -1,6 +1,5 @@
 ﻿Public Class frmQuiz
     Dim correctAns, notes As String
-    Dim globalIndex As Integer
     Dim userLife As Integer = 5
     Dim userScore As Integer = 0
     Dim topscore As Integer = 26
@@ -23,7 +22,6 @@
         quizFilter()
         checkQuizCount()
         Update_State()
-        'BSquiz.MoveLast()
     End Sub
 
     Private Sub txtQuestion_Resize(sender As Object, e As EventArgs) Handles txtQuestion.Resize
@@ -40,13 +38,6 @@
         End If
     End Sub
     Public Sub LoadQuiz()
-        'Dim x As String = quizIndex()
-        'While DataGridView1.Rows(x).Cells(7).Value = True
-
-        '    x = quizIndex()
-
-        'End While
-
         txtQuestion.Text = DataGridView1.CurrentRow.Cells(1).Value.ToString
         btnA.Text = DataGridView1.CurrentRow.Cells(2).Value.ToString
         btnB.Text = DataGridView1.CurrentRow.Cells(3).Value.ToString
@@ -54,20 +45,8 @@
         btnD.Text = DataGridView1.CurrentRow.Cells(5).Value.ToString
         notes = DataGridView1.CurrentRow.Cells(6).Value.ToString
         correctAns = DataGridView1.CurrentRow.Cells(8).Value.ToString
-        'DataGridView1.CurrentRow.Cells(7).Value = True
-
-        'globalIndex = x
     End Sub
 
-
-    Function quizIndex()
-        Dim i As Integer = Format((Rnd() * DataGridView1.RowCount - 1), "0")
-        While i <= 0
-            i = Format((Rnd() * DataGridView1.RowCount - 1), "0")
-        End While
-
-        Return i
-    End Function
     Private Sub quizFilter()
         BSquiz.Filter = "take = " & False
     End Sub
@@ -135,11 +114,6 @@
         End If
     End Sub
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        'DataGridView1.Rows(globalIndex).Cells(7).Value = False
-        'reloadTable()
-        'Dim authentic As String = DataGridView1.CurrentRow.Cells(0).Value.ToString
-
-        'Do While authentic = DataGridView1.CurrentRow.Cells(0).Value.ToString
         If DataGridView1.Rows(DataGridView1.RowCount - 1).Cells(1).Value = DataGridView1.CurrentRow.Cells(1).Value.ToString Then
             BSquiz.MoveFirst()
 
@@ -149,19 +123,15 @@
 
         quizFilter()
         checkQuizCount()
-
-        'Loop
-
         Enable_Buttons()
 
-        'frmQuiz_Load(sender, e)
     End Sub
 
 
     Private Sub AnswerButton_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnB.Click, btnC.Click, btnD.Click
         If correctAns = sender.text Then
             userScore += 1
-            DataGridView1.Rows(globalIndex).Cells(7).Value = True
+            DataGridView1.CurrentRow.Cells(7).Value = True
             MsgBox("You got the correct answer!", MsgBoxStyle.Information, "Correct")
             SaveTake()
             btnNext_Click(sender, e)
