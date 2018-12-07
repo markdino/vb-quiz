@@ -59,7 +59,7 @@ Partial Class frmQuiz
         Me.menuPanel = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPrev = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.lblTopScore = New System.Windows.Forms.Label()
         Me.lblMyScore = New System.Windows.Forms.Label()
@@ -349,7 +349,7 @@ Partial Class frmQuiz
         Me.menuPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.menuPanel.Controls.Add(Me.Button3)
         Me.menuPanel.Controls.Add(Me.btnNext)
-        Me.menuPanel.Controls.Add(Me.Button1)
+        Me.menuPanel.Controls.Add(Me.btnPrev)
         Me.menuPanel.Location = New System.Drawing.Point(0, 66)
         Me.menuPanel.Name = "menuPanel"
         Me.menuPanel.Size = New System.Drawing.Size(200, 382)
@@ -379,17 +379,17 @@ Partial Class frmQuiz
         Me.btnNext.Text = "&Next"
         Me.btnNext.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnPrev
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(11, 31)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(171, 47)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "&Retry"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnPrev.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnPrev.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnPrev.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrev.Location = New System.Drawing.Point(11, 31)
+        Me.btnPrev.Name = "btnPrev"
+        Me.btnPrev.Size = New System.Drawing.Size(171, 47)
+        Me.btnPrev.TabIndex = 2
+        Me.btnPrev.Text = "&Previous"
+        Me.btnPrev.UseVisualStyleBackColor = False
         '
         'btnMenu
         '
@@ -551,7 +551,7 @@ Partial Class frmQuiz
     Friend WithEvents menuPanel As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents btnNext As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnPrev As Button
     Friend WithEvents btnMenu As Button
     Friend WithEvents heart5 As PictureBox
     Friend WithEvents heart4 As PictureBox

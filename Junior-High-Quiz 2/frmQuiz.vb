@@ -126,7 +126,15 @@
         Enable_Buttons()
 
     End Sub
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+        Dim rowIndex As Integer = DataGridView1.CurrentRow.Index.ToString()
+        If rowIndex > 0 Then
+            BSquiz.MovePrevious()
+            LoadQuiz()
+            Enable_Buttons()
+        End If
 
+    End Sub
 
     Private Sub AnswerButton_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnB.Click, btnC.Click, btnD.Click
         If correctAns = sender.text Then
@@ -230,6 +238,7 @@
         sender.ForeColor = Color.White
         sender.BorderStyle = BorderStyle.Fixed3D
     End Sub
+
     Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
         sender.ForeColor = Color.Black
         sender.BorderStyle = BorderStyle.None
