@@ -23,6 +23,7 @@
         quizFilter()
         checkQuizCount()
         Update_State()
+        'BSquiz.MoveLast()
     End Sub
 
     Private Sub txtQuestion_Resize(sender As Object, e As EventArgs) Handles txtQuestion.Resize
@@ -39,23 +40,23 @@
         End If
     End Sub
     Public Sub LoadQuiz()
-        Dim x As String = quizIndex()
-        While DataGridView1.Rows(x).Cells(7).Value = True
+        'Dim x As String = quizIndex()
+        'While DataGridView1.Rows(x).Cells(7).Value = True
 
-            x = quizIndex()
+        '    x = quizIndex()
 
-        End While
+        'End While
 
-        txtQuestion.Text = DataGridView1.Rows(x).Cells(1).Value.ToString
-        btnA.Text = DataGridView1.Rows(x).Cells(2).Value.ToString
-        btnB.Text = DataGridView1.Rows(x).Cells(3).Value.ToString
-        btnC.Text = DataGridView1.Rows(x).Cells(4).Value.ToString
-        btnD.Text = DataGridView1.Rows(x).Cells(5).Value.ToString
-        notes = DataGridView1.Rows(x).Cells(6).Value.ToString
-        correctAns = DataGridView1.Rows(x).Cells(8).Value.ToString
-        'DataGridView1.Rows(x).Cells(7).Value = True
+        txtQuestion.Text = DataGridView1.CurrentRow.Cells(1).Value.ToString
+        btnA.Text = DataGridView1.CurrentRow.Cells(2).Value.ToString
+        btnB.Text = DataGridView1.CurrentRow.Cells(3).Value.ToString
+        btnC.Text = DataGridView1.CurrentRow.Cells(4).Value.ToString
+        btnD.Text = DataGridView1.CurrentRow.Cells(5).Value.ToString
+        notes = DataGridView1.CurrentRow.Cells(6).Value.ToString
+        correctAns = DataGridView1.CurrentRow.Cells(8).Value.ToString
+        'DataGridView1.CurrentRow.Cells(7).Value = True
 
-        globalIndex = x
+        'globalIndex = x
     End Sub
 
 
@@ -136,24 +137,33 @@
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         'DataGridView1.Rows(globalIndex).Cells(7).Value = False
         'reloadTable()
-        Dim authentic As String = DataGridView1.CurrentRow.Cells(0).Value.ToString
+        'Dim authentic As String = DataGridView1.CurrentRow.Cells(0).Value.ToString
 
         'Do While authentic = DataGridView1.CurrentRow.Cells(0).Value.ToString
+        If DataGridView1.Rows(DataGridView1.RowCount - 1).Cells(1).Value = DataGridView1.CurrentRow.Cells(1).Value.ToString Then
+            BSquiz.MoveFirst()
+
+        Else
+            BSquiz.MoveNext()
+        End If
+
         quizFilter()
         checkQuizCount()
 
         'Loop
 
         Enable_Buttons()
+
         'frmQuiz_Load(sender, e)
     End Sub
 
 
-    Private Sub btnA_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnB.Click, btnC.Click, btnD.Click
+    Private Sub AnswerButton_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnB.Click, btnC.Click, btnD.Click
         If correctAns = sender.text Then
             userScore += 1
             DataGridView1.Rows(globalIndex).Cells(7).Value = True
             MsgBox("You got the correct answer!", MsgBoxStyle.Information, "Correct")
+            SaveTake()
             btnNext_Click(sender, e)
         Else
             userLife -= 1
@@ -167,13 +177,18 @@
 
             Else
                 MsgBox("Game over!" & "Try again next time.", MsgBoxStyle.Exclamation, "Game over")
-                Reset_Quiz()
+                BackToMain_Click(sender, e)
             End If
 
         End If
         Update_State()
     End Sub
-
+    Private Sub BackToMain_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Reset_Quiz()
+        SaveTake()
+        Close()
+    End Sub
+#Region "Subs for UI"
     Private Sub Enable_Buttons()
         btnA.Enabled = True
         btnB.Enabled = True
@@ -217,36 +232,14 @@
         End If
 
     End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Reset_Quiz()
-    End Sub
-
-
     Private Sub btnResponsive()
-        'Dim col6 As Integer = txtQuestion.Width / 6
-        'Dim btnWidth As Integer = col6 * 2 - 10
-        'Dim spanLeft As Integer = txtQuestion.Left
-        'btnA.Left = col6 + spanLeft
-        'btnB.Left = btnA.Left
-        'btnC.Left = col6 * 3 + 10 + spanLeft
-        'btnD.Left = col6 * 3 + 10 + spanLeft
-
-        'btnA.Width = btnWidth
-        'btnB.Width = btnA.Width
-        'btnC.Width = btnWidth
-        'btnD.Width = btnWidth
-
-        'btnB.Top = btnD.Top
-
-        'lblTitle.Width = col6 * 2
-        'lblTitle.Left = col6 * 2 + spanLeft
-
-        'lifePanel.Left = spanLeft
         PanelButton.Left = ((txtQuestion.Width - PanelButton.Width) / 2) + txtQuestion.Left
         PanelButton.Top = (Height - PanelButton.Height) - 40
-
     End Sub
+#End Region
+
+#Region "controlBox"
+
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Reset_Quiz()
     End Sub
@@ -271,4 +264,6 @@
         sender.ForeColor = Color.Black
         sender.BorderStyle = BorderStyle.None
     End Sub
+#End Region
+
 End Class
