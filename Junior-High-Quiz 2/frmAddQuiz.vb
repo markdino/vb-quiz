@@ -33,10 +33,15 @@
         txtQ.Focus()
     End Sub
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Validate()
-        BSquiz.EndEdit()
-        UpdateData()
-        MsgBox("Successfully saved and updated!", MsgBoxStyle.Information, "Saved")
+        If txtQ.TextLength > 0 And txtA.TextLength > 0 And txtB.TextLength > 0 And txtC.TextLength > 0 And txtD.TextLength > 0 And txtCorrect.TextLength > 0 Then
+            Validate()
+            BSquiz.EndEdit()
+            UpdateData()
+            MsgBox("Successfully saved and updated!", MsgBoxStyle.Information, "Saved")
+        Else
+            MsgBox("Some text field are empty. Please fill up the requied fields.", MsgBoxStyle.Exclamation, "Incomplete")
+        End If
+
     End Sub
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If MsgBox("Are you sure you want to permanently delete this item?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, "Warning") = MsgBoxResult.Yes Then
