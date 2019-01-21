@@ -124,7 +124,7 @@
         quizFilter()
         checkQuizCount()
         Enable_Buttons()
-
+        Reset_Timer()
     End Sub
     Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
         Dim rowIndex As Integer = DataGridView1.CurrentRow.Index.ToString()
@@ -133,10 +133,11 @@
             LoadQuiz()
             Enable_Buttons()
         End If
-
+        Reset_Timer()
     End Sub
 
     Private Sub AnswerButton_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnB.Click, btnC.Click, btnD.Click
+        Timer1.Enabled = False
         If correctAns = sender.text Then
             userScore += 1
             DataGridView1.CurrentRow.Cells(7).Value = True
@@ -151,6 +152,7 @@
                     btnNext_Click(sender, e)
                 Else
                     sender.Enabled = False
+                    Reset_Timer()
                 End If
 
             Else
@@ -197,6 +199,12 @@
         lblTopScore.Left = (txtQuestion.Left + txtQuestion.Width) - lblTopScore.Width
         lblMyScore.Left = (txtQuestion.Left + txtQuestion.Width) - lblMyScore.Width
 
+        If lblMyScore.Width > lblTopScore.Width Then
+            lblTime.Left = lblMyScore.Left - lblTime.Width
+        Else
+            lblTime.Left = lblTopScore.Left - lblTime.Width
+        End If
+
         If userLife < 1 Then
             heart1.Visible = False
         ElseIf userLife < 2 Then
@@ -237,6 +245,32 @@
     Private Sub ControlBOx_Enter(sender As Object, e As EventArgs) Handles btnClose.MouseEnter, btnMax.MouseEnter, btnMin.MouseEnter
         sender.ForeColor = Color.White
         sender.BorderStyle = BorderStyle.Fixed3D
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lblTime.Text -= 1
+        If lblTime.Text > 3 Then
+            lblTime.ForeColor = Color.Yellow
+        Else
+            lblTime.ForeColor = Color.Red
+        End If
+
+        If lblTime.Text <= 0 Then
+            Timer1.Enabled = False
+            userLife -= 1
+            MsgBox("Time's up!" & vbCrLf & "You need to answer before the countdown ends.", MsgBoxStyle.Critical, "Timer")
+            btnNext_Click(sender, e)
+            If userLife <= 0 Then
+                MsgBox("Game over!" & "Try again next time.", MsgBoxStyle.Exclamation, "Game over")
+                BackToMain_Click(sender, e)
+            End If
+            UpdateData()
+        End If
+    End Sub
+    Private Sub Reset_Timer()
+        Timer1.Enabled = True
+        lblTime.Text = 10
+        lblTime.ForeColor = Color.Yellow
     End Sub
 
     Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
