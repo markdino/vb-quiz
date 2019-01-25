@@ -86,6 +86,7 @@
     Private Sub ControlBOx_Enter(sender As Object, e As EventArgs) Handles btnClose.MouseEnter, btnMax.MouseEnter, btnMin.MouseEnter
         sender.ForeColor = Color.White
         sender.BorderStyle = BorderStyle.Fixed3D
+        cring()
     End Sub
     Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
         sender.ForeColor = Color.Black
@@ -98,5 +99,9 @@
                 btnLogin_Click(sender, e)
             End If
         End If
+    End Sub
+
+    Private Sub btnLogin_MouseEnter(sender As Object, e As EventArgs) Handles btnLogin.MouseEnter, btnExit.MouseEnter
+        hover()
     End Sub
 End Class

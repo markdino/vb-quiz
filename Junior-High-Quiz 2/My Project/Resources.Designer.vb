@@ -61,12 +61,30 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property cring() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("cring", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property heart() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("heart", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property hover() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("hover", resourceCulture)
             End Get
         End Property
     End Module

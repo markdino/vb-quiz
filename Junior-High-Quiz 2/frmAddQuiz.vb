@@ -185,4 +185,8 @@
             btnAdd_Click(sender, e)
         End If
     End Sub
+
+    Private Sub btnAdd_MouseEnter(sender As Object, e As EventArgs) Handles btnAdd.MouseEnter, btnSave.MouseEnter, btnClear.MouseEnter, btnExit.MouseEnter, btnDelete.MouseEnter
+        hover()
+    End Sub
 End Class

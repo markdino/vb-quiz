@@ -245,6 +245,7 @@
     Private Sub ControlBOx_Enter(sender As Object, e As EventArgs) Handles btnClose.MouseEnter, btnMax.MouseEnter, btnMin.MouseEnter
         sender.ForeColor = Color.White
         sender.BorderStyle = BorderStyle.Fixed3D
+        cring()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -276,6 +277,10 @@
     Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
         sender.ForeColor = Color.Black
         sender.BorderStyle = BorderStyle.None
+    End Sub
+
+    Private Sub btnD_MouseEnter(sender As Object, e As EventArgs) Handles btnD.MouseEnter, btnC.MouseEnter, btnB.MouseEnter, btnA.MouseEnter
+        hover()
     End Sub
 #End Region
 
