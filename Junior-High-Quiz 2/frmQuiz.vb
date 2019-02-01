@@ -22,8 +22,16 @@
         quizFilter()
         checkQuizCount()
         Update_State()
-    End Sub
 
+        background_music()
+    End Sub
+    Private Sub background_music()
+        With Form1
+            .AxWMP.URL = Application.StartupPath & "\slowQuiz.wav"
+            .AxWMP.Ctlcontrols.play()
+            .AxWMP.settings.setMode("Loop", True)
+        End With
+    End Sub
     Private Sub txtQuestion_Resize(sender As Object, e As EventArgs) Handles txtQuestion.Resize
         btnResponsive()
     End Sub
@@ -164,6 +172,7 @@
         Update_State()
     End Sub
     Private Sub BackToMain_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Form1.AxWMP.URL = Application.StartupPath & "\sfxQuiz.wav"
         Reset_Quiz()
         SaveTake()
         Close()
@@ -229,6 +238,7 @@
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Reset_Quiz()
         Timer1.Enabled = False
+        Form1.AxWMP.URL = Application.StartupPath & "\sfxQuiz.wav"
     End Sub
 
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click

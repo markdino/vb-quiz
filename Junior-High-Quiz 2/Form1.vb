@@ -13,6 +13,12 @@
 
         centerPanel()
         respondUserUI()
+        background_music()
+    End Sub
+    Private Sub background_music()
+        AxWMP.URL = Application.StartupPath & "\sfxQuiz.wav"
+        AxWMP.Ctlcontrols.play()
+        AxWMP.settings.setMode("Loop", True)
     End Sub
 
     Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize

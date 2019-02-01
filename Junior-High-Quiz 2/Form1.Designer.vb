@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.btnAP = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -60,10 +61,12 @@ Partial Class Form1
         Me.btnMin = New System.Windows.Forms.Label()
         Me.btnMax = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Label()
+        Me.AxWMP = New AxWMPLib.AxWindowsMediaPlayer()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mainPanel.SuspendLayout()
+        CType(Me.AxWMP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnAP
@@ -93,6 +96,7 @@ Partial Class Form1
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(535, 176)
         Me.DataGridView1.TabIndex = 1
+        Me.DataGridView1.Visible = False
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -402,6 +406,16 @@ Partial Class Form1
         Me.btnClose.TabIndex = 13
         Me.btnClose.Text = "x"
         '
+        'AxWMP
+        '
+        Me.AxWMP.Enabled = True
+        Me.AxWMP.Location = New System.Drawing.Point(1027, 654)
+        Me.AxWMP.Name = "AxWMP"
+        Me.AxWMP.OcxState = CType(resources.GetObject("AxWMP.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxWMP.Size = New System.Drawing.Size(39, 33)
+        Me.AxWMP.TabIndex = 14
+        Me.AxWMP.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -411,6 +425,7 @@ Partial Class Form1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1067, 686)
         Me.ControlBox = False
+        Me.Controls.Add(Me.AxWMP)
         Me.Controls.Add(Me.btnMin)
         Me.Controls.Add(Me.btnMax)
         Me.Controls.Add(Me.btnClose)
@@ -428,6 +443,7 @@ Partial Class Form1
         CType(Me.QuizDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.mainPanel.ResumeLayout(False)
+        CType(Me.AxWMP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -470,4 +486,5 @@ Partial Class Form1
     Friend WithEvents btnMin As Label
     Friend WithEvents btnMax As Label
     Friend WithEvents btnClose As Label
+    Friend WithEvents AxWMP As AxWMPLib.AxWindowsMediaPlayer
 End Class
