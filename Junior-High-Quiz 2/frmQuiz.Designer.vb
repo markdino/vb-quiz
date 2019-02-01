@@ -283,6 +283,7 @@ Partial Class frmQuiz
         '
         'lifePanel
         '
+        Me.lifePanel.BackColor = System.Drawing.Color.Transparent
         Me.lifePanel.Controls.Add(Me.heart5)
         Me.lifePanel.Controls.Add(Me.heart4)
         Me.lifePanel.Controls.Add(Me.heart3)
@@ -408,6 +409,7 @@ Partial Class frmQuiz
         '
         Me.lblTopScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTopScore.AutoSize = True
+        Me.lblTopScore.BackColor = System.Drawing.Color.Transparent
         Me.lblTopScore.ForeColor = System.Drawing.Color.Maroon
         Me.lblTopScore.Location = New System.Drawing.Point(848, 9)
         Me.lblTopScore.Name = "lblTopScore"
@@ -420,6 +422,7 @@ Partial Class frmQuiz
         '
         Me.lblMyScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblMyScore.AutoSize = True
+        Me.lblMyScore.BackColor = System.Drawing.Color.Transparent
         Me.lblMyScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMyScore.Location = New System.Drawing.Point(833, 29)
         Me.lblMyScore.Name = "lblMyScore"
@@ -431,6 +434,8 @@ Partial Class frmQuiz
         'PanelButton
         '
         Me.PanelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.PanelButton.BackColor = System.Drawing.Color.Transparent
+        Me.PanelButton.BackgroundImage = Global.Junior_High_Quiz_2.My.Resources.Resources.lightblue90
         Me.PanelButton.Controls.Add(Me.btnC)
         Me.PanelButton.Controls.Add(Me.btnD)
         Me.PanelButton.Controls.Add(Me.btnB)
@@ -484,11 +489,12 @@ Partial Class frmQuiz
         '
         Me.lblTime.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTime.AutoSize = True
+        Me.lblTime.BackColor = System.Drawing.Color.Transparent
         Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTime.ForeColor = System.Drawing.Color.Yellow
         Me.lblTime.Location = New System.Drawing.Point(770, 13)
         Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(57, 39)
+        Me.lblTime.Size = New System.Drawing.Size(55, 38)
         Me.lblTime.TabIndex = 11
         Me.lblTime.Text = "10"
         '
@@ -502,6 +508,8 @@ Partial Class frmQuiz
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BackgroundImage = Global.Junior_High_Quiz_2.My.Resources.Resources.bgMain
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(933, 473)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblTime)

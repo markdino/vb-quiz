@@ -165,6 +165,14 @@
     <Content Include="quiz.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\assets\mobilevalprop2.png" />
+    <None Include="Resources\assets\dash.png" />
+    <None Include="Resources\assets\bgMain.png" />
+    <None Include="Resources\assets\tick.wav" />
+    <None Include="Resources\assets\slowQuiz.wav" />
+    <None Include="Resources\assets\boom.wav" />
+    <None Include="Resources\assets\lightblue90.png" />
+    <None Include="Resources\assets\bg.png" />
     <None Include="Resources\assets\cring.wav" />
     <None Include="Resources\assets\hover.wav" />
     <None Include="Resources\heart.png" />

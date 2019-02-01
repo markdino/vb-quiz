@@ -228,6 +228,7 @@
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Reset_Quiz()
+        Timer1.Enabled = False
     End Sub
 
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
@@ -250,22 +251,36 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblTime.Text -= 1
-        If lblTime.Text > 3 Then
+        If lblTime.Text > 5 Then
             lblTime.ForeColor = Color.Yellow
         Else
             lblTime.ForeColor = Color.Red
+            sfx_tick()
         End If
 
         If lblTime.Text <= 0 Then
+            sfx_boom()
             Timer1.Enabled = False
             userLife -= 1
+
+            SaveTake()
             MsgBox("Time's up!" & vbCrLf & "You need to answer before the countdown ends.", MsgBoxStyle.Critical, "Timer")
             btnNext_Click(sender, e)
             If userLife <= 0 Then
                 MsgBox("Game over!" & "Try again next time.", MsgBoxStyle.Exclamation, "Game over")
                 BackToMain_Click(sender, e)
             End If
-            UpdateData()
+            If userLife < 1 Then
+                heart1.Visible = False
+            ElseIf userLife < 2 Then
+                heart2.Visible = False
+            ElseIf userLife < 3 Then
+                heart3.Visible = False
+            ElseIf userLife < 4 Then
+                heart4.Visible = False
+            ElseIf userLife < 5 Then
+                heart5.Visible = False
+            End If
         End If
     End Sub
     Private Sub Reset_Timer()
