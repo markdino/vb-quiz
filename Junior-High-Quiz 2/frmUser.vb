@@ -17,7 +17,6 @@
         If cboUser.Text = "<Add new user>" Then
             newUser = True
             cboUser.Text = ""
-            btnExit.Text = "true"
         End If
     End Sub
 
@@ -102,6 +101,6 @@
     End Sub
 
     Private Sub btnLogin_MouseEnter(sender As Object, e As EventArgs) Handles btnLogin.MouseEnter, btnExit.MouseEnter
-        hover()
+        cring()
     End Sub
 End Class
