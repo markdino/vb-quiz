@@ -33,10 +33,15 @@
         txtQ.Focus()
     End Sub
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Validate()
-        BSquiz.EndEdit()
-        UpdateData()
-        MsgBox("Successfully saved and updated!", MsgBoxStyle.Information, "Saved")
+        If txtQ.TextLength > 0 And txtA.TextLength > 0 And txtB.TextLength > 0 And txtC.TextLength > 0 And txtD.TextLength > 0 And txtCorrect.TextLength > 0 Then
+            Validate()
+            BSquiz.EndEdit()
+            UpdateData()
+            MsgBox("Successfully saved and updated!", MsgBoxStyle.Information, "Saved")
+        Else
+            MsgBox("Some text field are empty. Please fill up the requied fields.", MsgBoxStyle.Exclamation, "Incomplete")
+        End If
+
     End Sub
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If MsgBox("Are you sure you want to permanently delete this item?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, "Warning") = MsgBoxResult.Yes Then
@@ -141,5 +146,47 @@
     Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
         sender.ForeColor = Color.Black
         sender.BorderStyle = BorderStyle.None
+    End Sub
+
+    Private Sub txtQ_KeyDown(sender As Object, e As KeyEventArgs) Handles txtQ.KeyDown
+        If e.KeyCode = Keys.ControlKey And e.KeyCode = Keys.Enter Then
+            txtA.Focus()
+        End If
+    End Sub
+    Private Sub txtA_KeyDown(sender As Object, e As KeyEventArgs) Handles txtA.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtB.Focus()
+        End If
+    End Sub
+    Private Sub txtB_KeyDown(sender As Object, e As KeyEventArgs) Handles txtB.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtC.Focus()
+        End If
+    End Sub
+    Private Sub txtC_KeyDown(sender As Object, e As KeyEventArgs) Handles txtC.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtD.Focus()
+        End If
+    End Sub
+    Private Sub txtD_KeyDown(sender As Object, e As KeyEventArgs) Handles txtD.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtCorrect.Focus()
+        End If
+    End Sub
+    Private Sub txtCorrect_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCorrect.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtNotes.Focus()
+        End If
+    End Sub
+    Private Sub txtNotes_KeyDown(sender As Object, e As KeyEventArgs) Handles txtNotes.KeyDown
+        If e.KeyCode = Keys.Control And e.KeyCode = Keys.S Then
+            btnSave_Click(sender, e)
+        ElseIf e.KeyCode = Keys.Control And e.KeyCode = Keys.A Then
+            btnAdd_Click(sender, e)
+        End If
+    End Sub
+
+    Private Sub btnAdd_MouseEnter(sender As Object, e As EventArgs) Handles btnAdd.MouseEnter, btnSave.MouseEnter, btnClear.MouseEnter, btnExit.MouseEnter, btnDelete.MouseEnter
+        hover()
     End Sub
 End Class

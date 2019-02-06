@@ -97,6 +97,7 @@
     <Compile Include="frmUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="modSFX.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -164,7 +165,36 @@
     <Content Include="quiz.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\assets\mobilevalprop2.png" />
+    <None Include="Resources\assets\dash.png" />
+    <None Include="Resources\assets\bgMain.png" />
+    <None Include="Resources\assets\tick.wav" />
+    <None Include="Resources\assets\slowQuiz.wav" />
+    <None Include="Resources\assets\boom.wav" />
+    <None Include="Resources\assets\lightblue90.png" />
+    <None Include="Resources\assets\bg.png" />
+    <None Include="Resources\assets\cring.wav" />
+    <None Include="Resources\assets\hover.wav" />
     <None Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

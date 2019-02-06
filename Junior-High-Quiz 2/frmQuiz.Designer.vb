@@ -59,7 +59,7 @@ Partial Class frmQuiz
         Me.menuPanel = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPrev = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.lblTopScore = New System.Windows.Forms.Label()
         Me.lblMyScore = New System.Windows.Forms.Label()
@@ -67,6 +67,8 @@ Partial Class frmQuiz
         Me.btnClose = New System.Windows.Forms.Label()
         Me.btnMax = New System.Windows.Forms.Label()
         Me.btnMin = New System.Windows.Forms.Label()
+        Me.lblTime = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.BSquiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QuizDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,7 +137,7 @@ Partial Class frmQuiz
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.QuizDataGridViewTextBoxColumn, Me.ADataGridViewTextBoxColumn, Me.BDataGridViewTextBoxColumn, Me.CDataGridViewTextBoxColumn, Me.DDataGridViewTextBoxColumn, Me.NotesDataGridViewTextBoxColumn, Me.TakeDataGridViewCheckBoxColumn, Me.CorrectDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.BSquiz
-        Me.DataGridView1.Location = New System.Drawing.Point(934, 287)
+        Me.DataGridView1.Location = New System.Drawing.Point(942, 115)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(848, 154)
@@ -281,6 +283,7 @@ Partial Class frmQuiz
         '
         'lifePanel
         '
+        Me.lifePanel.BackColor = System.Drawing.Color.Transparent
         Me.lifePanel.Controls.Add(Me.heart5)
         Me.lifePanel.Controls.Add(Me.heart4)
         Me.lifePanel.Controls.Add(Me.heart3)
@@ -349,7 +352,7 @@ Partial Class frmQuiz
         Me.menuPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.menuPanel.Controls.Add(Me.Button3)
         Me.menuPanel.Controls.Add(Me.btnNext)
-        Me.menuPanel.Controls.Add(Me.Button1)
+        Me.menuPanel.Controls.Add(Me.btnPrev)
         Me.menuPanel.Location = New System.Drawing.Point(0, 66)
         Me.menuPanel.Name = "menuPanel"
         Me.menuPanel.Size = New System.Drawing.Size(200, 382)
@@ -379,17 +382,17 @@ Partial Class frmQuiz
         Me.btnNext.Text = "&Next"
         Me.btnNext.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnPrev
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(11, 31)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(171, 47)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "&Retry"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnPrev.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnPrev.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnPrev.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrev.Location = New System.Drawing.Point(11, 31)
+        Me.btnPrev.Name = "btnPrev"
+        Me.btnPrev.Size = New System.Drawing.Size(171, 47)
+        Me.btnPrev.TabIndex = 2
+        Me.btnPrev.Text = "&Previous"
+        Me.btnPrev.UseVisualStyleBackColor = False
         '
         'btnMenu
         '
@@ -397,7 +400,7 @@ Partial Class frmQuiz
         Me.btnMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMenu.Location = New System.Drawing.Point(-1, 25)
         Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(63, 42)
+        Me.btnMenu.Size = New System.Drawing.Size(76, 42)
         Me.btnMenu.TabIndex = 7
         Me.btnMenu.Text = "Menu"
         Me.btnMenu.UseVisualStyleBackColor = True
@@ -406,10 +409,11 @@ Partial Class frmQuiz
         '
         Me.lblTopScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTopScore.AutoSize = True
+        Me.lblTopScore.BackColor = System.Drawing.Color.Transparent
         Me.lblTopScore.ForeColor = System.Drawing.Color.Maroon
         Me.lblTopScore.Location = New System.Drawing.Point(848, 9)
         Me.lblTopScore.Name = "lblTopScore"
-        Me.lblTopScore.Size = New System.Drawing.Size(70, 13)
+        Me.lblTopScore.Size = New System.Drawing.Size(88, 17)
         Me.lblTopScore.TabIndex = 8
         Me.lblTopScore.Text = "Top Score:"
         Me.lblTopScore.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -418,10 +422,11 @@ Partial Class frmQuiz
         '
         Me.lblMyScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblMyScore.AutoSize = True
+        Me.lblMyScore.BackColor = System.Drawing.Color.Transparent
         Me.lblMyScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMyScore.Location = New System.Drawing.Point(833, 29)
         Me.lblMyScore.Name = "lblMyScore"
-        Me.lblMyScore.Size = New System.Drawing.Size(88, 20)
+        Me.lblMyScore.Size = New System.Drawing.Size(111, 25)
         Me.lblMyScore.TabIndex = 8
         Me.lblMyScore.Text = "My Score:"
         Me.lblMyScore.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -429,6 +434,8 @@ Partial Class frmQuiz
         'PanelButton
         '
         Me.PanelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.PanelButton.BackColor = System.Drawing.Color.Transparent
+        Me.PanelButton.BackgroundImage = Global.Junior_High_Quiz_2.My.Resources.Resources.lightblue90
         Me.PanelButton.Controls.Add(Me.btnC)
         Me.PanelButton.Controls.Add(Me.btnD)
         Me.PanelButton.Controls.Add(Me.btnB)
@@ -447,7 +454,7 @@ Partial Class frmQuiz
         Me.btnClose.Location = New System.Drawing.Point(3, 3)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnClose.Size = New System.Drawing.Size(17, 17)
+        Me.btnClose.Size = New System.Drawing.Size(19, 21)
         Me.btnClose.TabIndex = 10
         Me.btnClose.Text = "x"
         '
@@ -460,7 +467,7 @@ Partial Class frmQuiz
         Me.btnMax.Location = New System.Drawing.Point(22, 3)
         Me.btnMax.Name = "btnMax"
         Me.btnMax.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnMax.Size = New System.Drawing.Size(18, 17)
+        Me.btnMax.Size = New System.Drawing.Size(21, 21)
         Me.btnMax.TabIndex = 10
         Me.btnMax.Text = "+"
         '
@@ -474,17 +481,37 @@ Partial Class frmQuiz
         Me.btnMin.Location = New System.Drawing.Point(42, 3)
         Me.btnMin.Name = "btnMin"
         Me.btnMin.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.btnMin.Size = New System.Drawing.Size(18, 17)
+        Me.btnMin.Size = New System.Drawing.Size(20, 20)
         Me.btnMin.TabIndex = 10
         Me.btnMin.Text = "-"
         '
+        'lblTime
+        '
+        Me.lblTime.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTime.AutoSize = True
+        Me.lblTime.BackColor = System.Drawing.Color.Transparent
+        Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTime.ForeColor = System.Drawing.Color.Yellow
+        Me.lblTime.Location = New System.Drawing.Point(770, 13)
+        Me.lblTime.Name = "lblTime"
+        Me.lblTime.Size = New System.Drawing.Size(55, 38)
+        Me.lblTime.TabIndex = 11
+        Me.lblTime.Text = "10"
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 2000
+        '
         'frmQuiz
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BackgroundImage = Global.Junior_High_Quiz_2.My.Resources.Resources.bgMain
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(933, 473)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblTime)
         Me.Controls.Add(Me.btnMin)
         Me.Controls.Add(Me.btnMax)
         Me.Controls.Add(Me.btnClose)
@@ -551,7 +578,7 @@ Partial Class frmQuiz
     Friend WithEvents menuPanel As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents btnNext As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnPrev As Button
     Friend WithEvents btnMenu As Button
     Friend WithEvents heart5 As PictureBox
     Friend WithEvents heart4 As PictureBox
@@ -561,4 +588,6 @@ Partial Class frmQuiz
     Friend WithEvents btnClose As Label
     Friend WithEvents btnMax As Label
     Friend WithEvents btnMin As Label
+    Friend WithEvents lblTime As Label
+    Friend WithEvents Timer1 As Timer
 End Class

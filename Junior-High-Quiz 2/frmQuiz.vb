@@ -1,6 +1,5 @@
 ﻿Public Class frmQuiz
     Dim correctAns, notes As String
-    Dim globalIndex As Integer
     Dim userLife As Integer = 5
     Dim userScore As Integer = 0
     Dim topscore As Integer = 26
@@ -23,8 +22,16 @@
         quizFilter()
         checkQuizCount()
         Update_State()
-    End Sub
 
+        background_music()
+    End Sub
+    Private Sub background_music()
+        With Form1
+            .AxWMP.URL = Application.StartupPath & "\slowQuiz.wav"
+            .AxWMP.Ctlcontrols.play()
+            .AxWMP.settings.setMode("Loop", True)
+        End With
+    End Sub
     Private Sub txtQuestion_Resize(sender As Object, e As EventArgs) Handles txtQuestion.Resize
         btnResponsive()
     End Sub
@@ -39,34 +46,15 @@
         End If
     End Sub
     Public Sub LoadQuiz()
-        Dim x As String = quizIndex()
-        While DataGridView1.Rows(x).Cells(7).Value = True
-
-            x = quizIndex()
-
-        End While
-
-        txtQuestion.Text = DataGridView1.Rows(x).Cells(1).Value.ToString
-        btnA.Text = DataGridView1.Rows(x).Cells(2).Value.ToString
-        btnB.Text = DataGridView1.Rows(x).Cells(3).Value.ToString
-        btnC.Text = DataGridView1.Rows(x).Cells(4).Value.ToString
-        btnD.Text = DataGridView1.Rows(x).Cells(5).Value.ToString
-        notes = DataGridView1.Rows(x).Cells(6).Value.ToString
-        correctAns = DataGridView1.Rows(x).Cells(8).Value.ToString
-        'DataGridView1.Rows(x).Cells(7).Value = True
-
-        globalIndex = x
+        txtQuestion.Text = DataGridView1.CurrentRow.Cells(1).Value.ToString
+        btnA.Text = DataGridView1.CurrentRow.Cells(2).Value.ToString
+        btnB.Text = DataGridView1.CurrentRow.Cells(3).Value.ToString
+        btnC.Text = DataGridView1.CurrentRow.Cells(4).Value.ToString
+        btnD.Text = DataGridView1.CurrentRow.Cells(5).Value.ToString
+        notes = DataGridView1.CurrentRow.Cells(6).Value.ToString
+        correctAns = DataGridView1.CurrentRow.Cells(8).Value.ToString
     End Sub
 
-
-    Function quizIndex()
-        Dim i As Integer = Format((Rnd() * DataGridView1.RowCount - 1), "0")
-        While i <= 0
-            i = Format((Rnd() * DataGridView1.RowCount - 1), "0")
-        End While
-
-        Return i
-    End Function
     Private Sub quizFilter()
         BSquiz.Filter = "take = " & False
     End Sub
@@ -134,26 +122,35 @@
         End If
     End Sub
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        'DataGridView1.Rows(globalIndex).Cells(7).Value = False
-        'reloadTable()
-        Dim authentic As String = DataGridView1.CurrentRow.Cells(0).Value.ToString
+        If DataGridView1.Rows(DataGridView1.RowCount - 1).Cells(1).Value = DataGridView1.CurrentRow.Cells(1).Value.ToString Then
+            BSquiz.MoveFirst()
 
-        'Do While authentic = DataGridView1.CurrentRow.Cells(0).Value.ToString
+        Else
+            BSquiz.MoveNext()
+        End If
+
         quizFilter()
         checkQuizCount()
-
-        'Loop
-
         Enable_Buttons()
-        'frmQuiz_Load(sender, e)
+        Reset_Timer()
+    End Sub
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+        Dim rowIndex As Integer = DataGridView1.CurrentRow.Index.ToString()
+        If rowIndex > 0 Then
+            BSquiz.MovePrevious()
+            LoadQuiz()
+            Enable_Buttons()
+        End If
+        Reset_Timer()
     End Sub
 
-
-    Private Sub btnA_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnB.Click, btnC.Click, btnD.Click
+    Private Sub AnswerButton_Click(sender As Object, e As EventArgs) Handles btnA.Click, btnB.Click, btnC.Click, btnD.Click
+        Timer1.Enabled = False
         If correctAns = sender.text Then
             userScore += 1
-            DataGridView1.Rows(globalIndex).Cells(7).Value = True
+            DataGridView1.CurrentRow.Cells(7).Value = True
             MsgBox("You got the correct answer!", MsgBoxStyle.Information, "Correct")
+            SaveTake()
             btnNext_Click(sender, e)
         Else
             userLife -= 1
@@ -163,17 +160,24 @@
                     btnNext_Click(sender, e)
                 Else
                     sender.Enabled = False
+                    Reset_Timer()
                 End If
 
             Else
                 MsgBox("Game over!" & "Try again next time.", MsgBoxStyle.Exclamation, "Game over")
-                Reset_Quiz()
+                BackToMain_Click(sender, e)
             End If
 
         End If
         Update_State()
     End Sub
-
+    Private Sub BackToMain_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Form1.AxWMP.URL = Application.StartupPath & "\sfxQuiz.wav"
+        Reset_Quiz()
+        SaveTake()
+        Close()
+    End Sub
+#Region "Subs for UI"
     Private Sub Enable_Buttons()
         btnA.Enabled = True
         btnB.Enabled = True
@@ -204,6 +208,12 @@
         lblTopScore.Left = (txtQuestion.Left + txtQuestion.Width) - lblTopScore.Width
         lblMyScore.Left = (txtQuestion.Left + txtQuestion.Width) - lblMyScore.Width
 
+        If lblMyScore.Width > lblTopScore.Width Then
+            lblTime.Left = lblMyScore.Left - lblTime.Width
+        Else
+            lblTime.Left = lblTopScore.Left - lblTime.Width
+        End If
+
         If userLife < 1 Then
             heart1.Visible = False
         ElseIf userLife < 2 Then
@@ -217,38 +227,18 @@
         End If
 
     End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Reset_Quiz()
-    End Sub
-
-
     Private Sub btnResponsive()
-        'Dim col6 As Integer = txtQuestion.Width / 6
-        'Dim btnWidth As Integer = col6 * 2 - 10
-        'Dim spanLeft As Integer = txtQuestion.Left
-        'btnA.Left = col6 + spanLeft
-        'btnB.Left = btnA.Left
-        'btnC.Left = col6 * 3 + 10 + spanLeft
-        'btnD.Left = col6 * 3 + 10 + spanLeft
-
-        'btnA.Width = btnWidth
-        'btnB.Width = btnA.Width
-        'btnC.Width = btnWidth
-        'btnD.Width = btnWidth
-
-        'btnB.Top = btnD.Top
-
-        'lblTitle.Width = col6 * 2
-        'lblTitle.Left = col6 * 2 + spanLeft
-
-        'lifePanel.Left = spanLeft
         PanelButton.Left = ((txtQuestion.Width - PanelButton.Width) / 2) + txtQuestion.Left
         PanelButton.Top = (Height - PanelButton.Height) - 40
-
     End Sub
+#End Region
+
+#Region "controlBox"
+
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Reset_Quiz()
+        Timer1.Enabled = False
+        Form1.AxWMP.URL = Application.StartupPath & "\sfxQuiz.wav"
     End Sub
 
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
@@ -266,9 +256,57 @@
     Private Sub ControlBOx_Enter(sender As Object, e As EventArgs) Handles btnClose.MouseEnter, btnMax.MouseEnter, btnMin.MouseEnter
         sender.ForeColor = Color.White
         sender.BorderStyle = BorderStyle.Fixed3D
+        cring()
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lblTime.Text -= 1
+        If lblTime.Text > 5 Then
+            lblTime.ForeColor = Color.Yellow
+        Else
+            lblTime.ForeColor = Color.Red
+            sfx_tick()
+        End If
+
+        If lblTime.Text <= 0 Then
+            sfx_boom()
+            Timer1.Enabled = False
+            userLife -= 1
+
+            SaveTake()
+            MsgBox("Time's up!" & vbCrLf & "You need to answer before the countdown ends.", MsgBoxStyle.Critical, "Timer")
+            btnNext_Click(sender, e)
+            If userLife <= 0 Then
+                MsgBox("Game over!" & "Try again next time.", MsgBoxStyle.Exclamation, "Game over")
+                BackToMain_Click(sender, e)
+            End If
+            If userLife < 1 Then
+                heart1.Visible = False
+            ElseIf userLife < 2 Then
+                heart2.Visible = False
+            ElseIf userLife < 3 Then
+                heart3.Visible = False
+            ElseIf userLife < 4 Then
+                heart4.Visible = False
+            ElseIf userLife < 5 Then
+                heart5.Visible = False
+            End If
+        End If
+    End Sub
+    Private Sub Reset_Timer()
+        Timer1.Enabled = True
+        lblTime.Text = 10
+        lblTime.ForeColor = Color.Yellow
+    End Sub
+
     Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
         sender.ForeColor = Color.Black
         sender.BorderStyle = BorderStyle.None
     End Sub
+
+    Private Sub btnD_MouseEnter(sender As Object, e As EventArgs) Handles btnD.MouseEnter, btnC.MouseEnter, btnB.MouseEnter, btnA.MouseEnter
+        hover()
+    End Sub
+#End Region
+
 End Class

@@ -13,6 +13,12 @@
 
         centerPanel()
         respondUserUI()
+        background_music()
+    End Sub
+    Private Sub background_music()
+        AxWMP.URL = Application.StartupPath & "\sfxQuiz.wav"
+        AxWMP.Ctlcontrols.play()
+        AxWMP.settings.setMode("Loop", True)
     End Sub
 
     Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize
@@ -39,6 +45,7 @@
     End Sub
     Private Sub Button_MouseEnter(sender As Object, e As EventArgs) Handles btnAP.MouseEnter, btnVal.MouseEnter, btnMap.MouseEnter, btnTLE.MouseEnter, btnSci.MouseEnter, btnMath.MouseEnter, btnFil.MouseEnter, btnEng.MouseEnter, btnComp.MouseEnter
         sender.forecolor = Color.White
+        hover()
     End Sub
     Private Sub Button_MouseLeave(sender As Object, e As EventArgs) Handles btnAP.MouseLeave, btnVal.MouseLeave, btnMap.MouseLeave, btnTLE.MouseLeave, btnSci.MouseLeave, btnMath.MouseLeave, btnFil.MouseLeave, btnEng.MouseLeave, btnComp.MouseLeave
         sender.forecolor = Color.Black
@@ -67,7 +74,9 @@
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        End
+        If MsgBox("This will close the program. Proceed anyway?", MsgBoxStyle.Question + MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            End
+        End If
     End Sub
 
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
@@ -85,6 +94,7 @@
     Private Sub ControlBOx_Enter(sender As Object, e As EventArgs) Handles btnClose.MouseEnter, btnMax.MouseEnter, btnMin.MouseEnter
         sender.ForeColor = Color.White
         sender.BorderStyle = BorderStyle.Fixed3D
+        cring()
     End Sub
     Private Sub ControlBOx_Leave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave, btnMax.MouseLeave, btnMin.MouseLeave
         sender.ForeColor = Color.Black
