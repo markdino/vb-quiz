@@ -42,6 +42,7 @@
         frmQuiz.lblTitle.Text = sender.Text
         frmQuiz.Show()
         frmQuiz.WindowState = WindowState
+        AxWMP.Ctlcontrols.stop()
     End Sub
     Private Sub Button_MouseEnter(sender As Object, e As EventArgs) Handles btnAP.MouseEnter, btnVal.MouseEnter, btnMap.MouseEnter, btnTLE.MouseEnter, btnSci.MouseEnter, btnMath.MouseEnter, btnFil.MouseEnter, btnEng.MouseEnter, btnComp.MouseEnter
         sender.forecolor = Color.White

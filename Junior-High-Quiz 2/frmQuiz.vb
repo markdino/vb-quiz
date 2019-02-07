@@ -26,11 +26,7 @@
         background_music()
     End Sub
     Private Sub background_music()
-        With Form1
-            .AxWMP.URL = Application.StartupPath & "\slowQuiz.wav"
-            .AxWMP.Ctlcontrols.play()
-            .AxWMP.settings.setMode("Loop", True)
-        End With
+        Form1.AxWMP.URL = Application.StartupPath & "\slowQuiz.wav"
     End Sub
     Private Sub txtQuestion_Resize(sender As Object, e As EventArgs) Handles txtQuestion.Resize
         btnResponsive()
@@ -40,6 +36,7 @@
         Dim rowCountCheck As Integer = DataGridView1.RowCount
         If rowCountCheck > 2 Then
             LoadQuiz()
+            frmVid.Show()
         Else
             MsgBox("Not enough quiz to load." & vbCrLf & "Please contact administrator to fix and load more quiz.", vbExclamation, "Warning")
             Close()
@@ -294,7 +291,7 @@
         End If
     End Sub
     Private Sub Reset_Timer()
-        Timer1.Enabled = True
+        'Timer1.Enabled = True
         lblTime.Text = 10
         lblTime.ForeColor = Color.Yellow
     End Sub
