@@ -73,10 +73,9 @@ Partial Class Form1
         '
         Me.btnAP.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnAP.ForeColor = System.Drawing.Color.Black
-        Me.btnAP.Location = New System.Drawing.Point(28, 119)
-        Me.btnAP.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAP.Location = New System.Drawing.Point(21, 97)
         Me.btnAP.Name = "btnAP"
-        Me.btnAP.Size = New System.Drawing.Size(268, 66)
+        Me.btnAP.Size = New System.Drawing.Size(201, 54)
         Me.btnAP.TabIndex = 0
         Me.btnAP.Text = "AP"
         Me.btnAP.UseVisualStyleBackColor = False
@@ -90,11 +89,10 @@ Partial Class Form1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.QuizDataGridViewTextBoxColumn, Me.ADataGridViewTextBoxColumn, Me.BDataGridViewTextBoxColumn, Me.CDataGridViewTextBoxColumn, Me.DDataGridViewTextBoxColumn, Me.NotesDataGridViewTextBoxColumn, Me.TakeDataGridViewCheckBoxColumn, Me.CorrectDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.QuizDataSetBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(1077, 15)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView1.Location = New System.Drawing.Point(808, 12)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(535, 176)
+        Me.DataGridView1.Size = New System.Drawing.Size(401, 143)
         Me.DataGridView1.TabIndex = 1
         Me.DataGridView1.Visible = False
         '
@@ -175,10 +173,9 @@ Partial Class Form1
         '
         Me.btnComp.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnComp.ForeColor = System.Drawing.Color.Black
-        Me.btnComp.Location = New System.Drawing.Point(497, 119)
-        Me.btnComp.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnComp.Location = New System.Drawing.Point(373, 97)
         Me.btnComp.Name = "btnComp"
-        Me.btnComp.Size = New System.Drawing.Size(268, 66)
+        Me.btnComp.Size = New System.Drawing.Size(201, 54)
         Me.btnComp.TabIndex = 0
         Me.btnComp.Text = "Computer"
         Me.btnComp.UseVisualStyleBackColor = False
@@ -187,10 +184,9 @@ Partial Class Form1
         '
         Me.btnEng.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnEng.ForeColor = System.Drawing.Color.Black
-        Me.btnEng.Location = New System.Drawing.Point(28, 212)
-        Me.btnEng.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEng.Location = New System.Drawing.Point(21, 172)
         Me.btnEng.Name = "btnEng"
-        Me.btnEng.Size = New System.Drawing.Size(268, 66)
+        Me.btnEng.Size = New System.Drawing.Size(201, 54)
         Me.btnEng.TabIndex = 0
         Me.btnEng.Text = "English"
         Me.btnEng.UseVisualStyleBackColor = False
@@ -199,10 +195,9 @@ Partial Class Form1
         '
         Me.btnFil.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnFil.ForeColor = System.Drawing.Color.Black
-        Me.btnFil.Location = New System.Drawing.Point(497, 212)
-        Me.btnFil.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnFil.Location = New System.Drawing.Point(373, 172)
         Me.btnFil.Name = "btnFil"
-        Me.btnFil.Size = New System.Drawing.Size(268, 66)
+        Me.btnFil.Size = New System.Drawing.Size(201, 54)
         Me.btnFil.TabIndex = 0
         Me.btnFil.Text = "Filipino"
         Me.btnFil.UseVisualStyleBackColor = False
@@ -211,10 +206,9 @@ Partial Class Form1
         '
         Me.btnMath.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnMath.ForeColor = System.Drawing.Color.Black
-        Me.btnMath.Location = New System.Drawing.Point(28, 305)
-        Me.btnMath.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnMath.Location = New System.Drawing.Point(21, 248)
         Me.btnMath.Name = "btnMath"
-        Me.btnMath.Size = New System.Drawing.Size(268, 66)
+        Me.btnMath.Size = New System.Drawing.Size(201, 54)
         Me.btnMath.TabIndex = 0
         Me.btnMath.Text = "Math"
         Me.btnMath.UseVisualStyleBackColor = False
@@ -223,10 +217,9 @@ Partial Class Form1
         '
         Me.btnSci.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnSci.ForeColor = System.Drawing.Color.Black
-        Me.btnSci.Location = New System.Drawing.Point(497, 305)
-        Me.btnSci.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSci.Location = New System.Drawing.Point(373, 248)
         Me.btnSci.Name = "btnSci"
-        Me.btnSci.Size = New System.Drawing.Size(268, 66)
+        Me.btnSci.Size = New System.Drawing.Size(201, 54)
         Me.btnSci.TabIndex = 0
         Me.btnSci.Text = "Science"
         Me.btnSci.UseVisualStyleBackColor = False
@@ -235,10 +228,9 @@ Partial Class Form1
         '
         Me.btnTLE.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnTLE.ForeColor = System.Drawing.Color.Black
-        Me.btnTLE.Location = New System.Drawing.Point(28, 398)
-        Me.btnTLE.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnTLE.Location = New System.Drawing.Point(21, 323)
         Me.btnTLE.Name = "btnTLE"
-        Me.btnTLE.Size = New System.Drawing.Size(268, 66)
+        Me.btnTLE.Size = New System.Drawing.Size(201, 54)
         Me.btnTLE.TabIndex = 0
         Me.btnTLE.Text = "TLE"
         Me.btnTLE.UseVisualStyleBackColor = False
@@ -247,10 +239,9 @@ Partial Class Form1
         '
         Me.btnMap.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnMap.ForeColor = System.Drawing.Color.Black
-        Me.btnMap.Location = New System.Drawing.Point(497, 398)
-        Me.btnMap.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnMap.Location = New System.Drawing.Point(373, 323)
         Me.btnMap.Name = "btnMap"
-        Me.btnMap.Size = New System.Drawing.Size(268, 66)
+        Me.btnMap.Size = New System.Drawing.Size(201, 54)
         Me.btnMap.TabIndex = 0
         Me.btnMap.Text = "Mapeh"
         Me.btnMap.UseVisualStyleBackColor = False
@@ -259,10 +250,9 @@ Partial Class Form1
         '
         Me.btnVal.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnVal.ForeColor = System.Drawing.Color.Black
-        Me.btnVal.Location = New System.Drawing.Point(259, 491)
-        Me.btnVal.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnVal.Location = New System.Drawing.Point(194, 399)
         Me.btnVal.Name = "btnVal"
-        Me.btnVal.Size = New System.Drawing.Size(268, 66)
+        Me.btnVal.Size = New System.Drawing.Size(201, 54)
         Me.btnVal.TabIndex = 0
         Me.btnVal.Text = "Values"
         Me.btnVal.UseVisualStyleBackColor = False
@@ -282,20 +272,18 @@ Partial Class Form1
         Me.mainPanel.Controls.Add(Me.btnComp)
         Me.mainPanel.Controls.Add(Me.btnAP)
         Me.mainPanel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mainPanel.Location = New System.Drawing.Point(17, 43)
-        Me.mainPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.mainPanel.Location = New System.Drawing.Point(13, 35)
         Me.mainPanel.Name = "mainPanel"
-        Me.mainPanel.Size = New System.Drawing.Size(801, 599)
+        Me.mainPanel.Size = New System.Drawing.Size(601, 487)
         Me.mainPanel.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(173, 23)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(130, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(421, 76)
+        Me.Label1.Size = New System.Drawing.Size(316, 62)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Subject"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -341,10 +329,9 @@ Partial Class Form1
         Me.lblUser.AutoSize = True
         Me.lblUser.BackColor = System.Drawing.Color.Transparent
         Me.lblUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.Location = New System.Drawing.Point(924, 11)
-        Me.lblUser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblUser.Location = New System.Drawing.Point(693, 9)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(55, 20)
+        Me.lblUser.Size = New System.Drawing.Size(45, 16)
         Me.lblUser.TabIndex = 3
         Me.lblUser.Text = "User:"
         '
@@ -354,10 +341,9 @@ Partial Class Form1
         Me.lblLogout.BackColor = System.Drawing.Color.Transparent
         Me.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogout.Location = New System.Drawing.Point(985, 11)
-        Me.lblLogout.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLogout.Location = New System.Drawing.Point(739, 9)
         Me.lblLogout.Name = "lblLogout"
-        Me.lblLogout.Size = New System.Drawing.Size(60, 20)
+        Me.lblLogout.Size = New System.Drawing.Size(49, 16)
         Me.lblLogout.TabIndex = 3
         Me.lblLogout.Text = "Logout"
         '
@@ -368,11 +354,10 @@ Partial Class Form1
         Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMin.Font = New System.Drawing.Font("Bauhaus 93", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMin.ForeColor = System.Drawing.Color.Black
-        Me.btnMin.Location = New System.Drawing.Point(55, 2)
-        Me.btnMin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnMin.Location = New System.Drawing.Point(41, 2)
         Me.btnMin.Name = "btnMin"
-        Me.btnMin.Padding = New System.Windows.Forms.Padding(5, 2, 5, 2)
-        Me.btnMin.Size = New System.Drawing.Size(22, 20)
+        Me.btnMin.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.btnMin.Size = New System.Drawing.Size(18, 17)
         Me.btnMin.TabIndex = 11
         Me.btnMin.Text = "-"
         '
@@ -383,11 +368,10 @@ Partial Class Form1
         Me.btnMax.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMax.ForeColor = System.Drawing.Color.Black
-        Me.btnMax.Location = New System.Drawing.Point(28, 2)
-        Me.btnMax.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnMax.Location = New System.Drawing.Point(21, 2)
         Me.btnMax.Name = "btnMax"
-        Me.btnMax.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnMax.Size = New System.Drawing.Size(23, 21)
+        Me.btnMax.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnMax.Size = New System.Drawing.Size(18, 17)
         Me.btnMax.TabIndex = 12
         Me.btnMax.Text = "+"
         '
@@ -398,11 +382,10 @@ Partial Class Form1
         Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.ForeColor = System.Drawing.Color.Black
-        Me.btnClose.Location = New System.Drawing.Point(3, 2)
-        Me.btnClose.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.btnClose.Location = New System.Drawing.Point(2, 2)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnClose.Size = New System.Drawing.Size(21, 21)
+        Me.btnClose.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnClose.Size = New System.Drawing.Size(17, 17)
         Me.btnClose.TabIndex = 13
         Me.btnClose.Text = "x"
         '
@@ -410,6 +393,7 @@ Partial Class Form1
         '
         Me.AxWMP.Enabled = True
         Me.AxWMP.Location = New System.Drawing.Point(1027, 654)
+        Me.AxWMP.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.AxWMP.Name = "AxWMP"
         Me.AxWMP.OcxState = CType(resources.GetObject("AxWMP.OcxState"), System.Windows.Forms.AxHost.State)
         Me.AxWMP.Size = New System.Drawing.Size(39, 33)
@@ -418,12 +402,12 @@ Partial Class Form1
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImage = Global.Junior_High_Quiz_2.My.Resources.Resources.bg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1067, 686)
+        Me.ClientSize = New System.Drawing.Size(800, 557)
         Me.ControlBox = False
         Me.Controls.Add(Me.AxWMP)
         Me.Controls.Add(Me.btnMin)
@@ -433,8 +417,8 @@ Partial Class Form1
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.mainPanel)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MinimumSize = New System.Drawing.Size(1082, 694)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(816, 571)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Subject"
