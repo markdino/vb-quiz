@@ -7,6 +7,8 @@
         userList = objreader.ReadToEnd
         cboUser.Items.AddRange(IO.File.ReadAllLines(userFile))
         objreader.Close()
+        Form1.Show()
+        Form1.Hide()
     End Sub
     Private Sub cboUser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboUser.SelectedIndexChanged
         If cboUser.Items.Contains(cboUser.Text) Then

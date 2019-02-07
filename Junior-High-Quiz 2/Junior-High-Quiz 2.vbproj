@@ -46,6 +46,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -89,6 +92,12 @@
       <DependentUpon>frmQuiz.vb</DependentUpon>
     </Compile>
     <Compile Include="frmQuiz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.vb">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUser.Designer.vb">
@@ -135,6 +144,9 @@
     <EmbeddedResource Include="frmQuiz.resx">
       <DependentUpon>frmQuiz.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUser.resx">
       <DependentUpon>frmUser.vb</DependentUpon>
     </EmbeddedResource>
@@ -171,9 +183,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="quiz.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\assets\splash2.jpg" />
+    <None Include="Resources\assets\splash1.jpg" />
     <None Include="Resources\assets\mobilevalprop2.png" />
     <None Include="Resources\assets\dash.png" />
     <None Include="Resources\assets\bgMain.png" />

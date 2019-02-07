@@ -5,8 +5,8 @@
         'Me.Hide()
         'Form1.Show()
 
-        frmUser.Show()
-        frmUser.Focus()
+        frmSplash.Show()
+        frmSplash.Focus()
 
     End Sub
 

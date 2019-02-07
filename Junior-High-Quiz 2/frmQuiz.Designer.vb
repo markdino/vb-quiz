@@ -23,6 +23,7 @@ Partial Class frmQuiz
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmQuiz))
         Me.BSquiz = New System.Windows.Forms.BindingSource(Me.components)
         Me.QuizDataSet = New Junior_High_Quiz_2.quizDataSet()
         Me.APTableAdapter = New Junior_High_Quiz_2.quizDataSetTableAdapters.APTableAdapter()
@@ -413,7 +414,7 @@ Partial Class frmQuiz
         Me.lblTopScore.ForeColor = System.Drawing.Color.Maroon
         Me.lblTopScore.Location = New System.Drawing.Point(848, 9)
         Me.lblTopScore.Name = "lblTopScore"
-        Me.lblTopScore.Size = New System.Drawing.Size(88, 17)
+        Me.lblTopScore.Size = New System.Drawing.Size(70, 13)
         Me.lblTopScore.TabIndex = 8
         Me.lblTopScore.Text = "Top Score:"
         Me.lblTopScore.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -426,7 +427,7 @@ Partial Class frmQuiz
         Me.lblMyScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMyScore.Location = New System.Drawing.Point(833, 29)
         Me.lblMyScore.Name = "lblMyScore"
-        Me.lblMyScore.Size = New System.Drawing.Size(111, 25)
+        Me.lblMyScore.Size = New System.Drawing.Size(88, 20)
         Me.lblMyScore.TabIndex = 8
         Me.lblMyScore.Text = "My Score:"
         Me.lblMyScore.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -454,7 +455,7 @@ Partial Class frmQuiz
         Me.btnClose.Location = New System.Drawing.Point(3, 3)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnClose.Size = New System.Drawing.Size(19, 21)
+        Me.btnClose.Size = New System.Drawing.Size(17, 17)
         Me.btnClose.TabIndex = 10
         Me.btnClose.Text = "x"
         '
@@ -467,7 +468,7 @@ Partial Class frmQuiz
         Me.btnMax.Location = New System.Drawing.Point(22, 3)
         Me.btnMax.Name = "btnMax"
         Me.btnMax.Padding = New System.Windows.Forms.Padding(2)
-        Me.btnMax.Size = New System.Drawing.Size(21, 21)
+        Me.btnMax.Size = New System.Drawing.Size(18, 17)
         Me.btnMax.TabIndex = 10
         Me.btnMax.Text = "+"
         '
@@ -481,7 +482,7 @@ Partial Class frmQuiz
         Me.btnMin.Location = New System.Drawing.Point(42, 3)
         Me.btnMin.Name = "btnMin"
         Me.btnMin.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.btnMin.Size = New System.Drawing.Size(20, 20)
+        Me.btnMin.Size = New System.Drawing.Size(18, 17)
         Me.btnMin.TabIndex = 10
         Me.btnMin.Text = "-"
         '
@@ -494,7 +495,7 @@ Partial Class frmQuiz
         Me.lblTime.ForeColor = System.Drawing.Color.Yellow
         Me.lblTime.Location = New System.Drawing.Point(770, 13)
         Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(55, 38)
+        Me.lblTime.Size = New System.Drawing.Size(46, 31)
         Me.lblTime.TabIndex = 11
         Me.lblTime.Text = "10"
         '
@@ -504,7 +505,7 @@ Partial Class frmQuiz
         '
         'frmQuiz
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImage = Global.Junior_High_Quiz_2.My.Resources.Resources.bgMain
@@ -525,6 +526,7 @@ Partial Class frmQuiz
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.txtQuestion)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(949, 489)
         Me.Name = "frmQuiz"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
