@@ -1,4 +1,5 @@
 ﻿Module modSFX
+    Public vidcount As Integer = 0
     Public Sub hover()
         My.Computer.Audio.Play(My.Resources.hover, AudioPlayMode.Background)
     End Sub
