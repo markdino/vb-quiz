@@ -50,9 +50,9 @@ Partial Class frmSplash
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(106, 288)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(168, 32)
+        Me.Label1.Size = New System.Drawing.Size(165, 32)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Senior High"
+        Me.Label1.Text = "Junior High"
         '
         'Label2
         '
