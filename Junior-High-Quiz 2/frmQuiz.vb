@@ -22,7 +22,7 @@
         quizFilter()
         checkQuizCount()
         Update_State()
-
+        frmVid.Show()
         background_music()
     End Sub
     Private Sub background_music()
@@ -36,7 +36,7 @@
         Dim rowCountCheck As Integer = DataGridView1.RowCount
         If rowCountCheck > 2 Then
             LoadQuiz()
-            frmVid.Show()
+            'frmVid.Show()
         Else
             MsgBox("Not enough quiz to load." & vbCrLf & "Please contact administrator to fix and load more quiz.", vbExclamation, "Warning")
             Close()
@@ -146,7 +146,7 @@
         If correctAns = sender.text Then
             userScore += 1
             DataGridView1.CurrentRow.Cells(7).Value = True
-            MsgBox("You got the correct answer!", MsgBoxStyle.Information, "Correct")
+            MsgBox("You got the correct answer!" & vbCrLf & "It's " & correctAns & vbCrLf & vbCrLf & notes, MsgBoxStyle.Information, "Correct")
             SaveTake()
             btnNext_Click(sender, e)
         Else
@@ -161,7 +161,7 @@
                 End If
 
             Else
-                MsgBox("Game over!" & "Try again next time.", MsgBoxStyle.Exclamation, "Game over")
+                MsgBox("Game over!" & "Try again next time." & vbCrLf & vbCrLf & "The correct answer is " & correctAns & vbCrLf & vbCrLf & notes, MsgBoxStyle.Exclamation, "Game over")
                 BackToMain_Click(sender, e)
             End If
 
@@ -291,7 +291,7 @@
         End If
     End Sub
     Private Sub Reset_Timer()
-        'Timer1.Enabled = True
+        Timer1.Enabled = True
         lblTime.Text = 10
         lblTime.ForeColor = Color.Yellow
     End Sub
